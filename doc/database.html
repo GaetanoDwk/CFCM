@@ -1,0 +1,841 @@
+<html>
+    <title>Documentazione CFCM</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='Documentazione tecnica di CFCM'>
+    <meta name='author' content='Gaetano'>
+    <!-- MOBILE META -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <head>
+        <link rel='stylesheet' href='../font/awesome407/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='css/style.css'>
+
+    </head>
+
+    <body>
+        <br>
+        <div style="position: absolute; left: 20%"><a href="index.html"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a></div>
+        <div class="container">
+            <center>
+                <h1>Database</h1>
+            </center>
+            <p>Di seguito sono riportate le tabelle più importanti al funzionamento di CFCM. E' stata impostata una struttura gerarchica a partire dal cliente. Le tabelle sono correlate tra loro tramite i campi di chiavi esterne (ex_id_**) </p>
+            <img src="img/db1.png" style='border: 1px solid black'>
+            <br><br>
+            <p>Altrettanto importanti ma non correlate tra loro, vi sono le rimanenti tabelle relative a funzionalità aggiuntive e/o di supporto al lavoro di un tecnico forense.</p>
+            <img src="img/db2.png" style='border: 1px solid black'>
+            <br><br>
+            <center><h1>Descrizione tabelle</h1></center>
+            <!-- TABELLA CLIENTE -->
+            <table>
+                <thead>
+                    <th>CLIENTE</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>cli_id: int</code></td>
+                    <td>Id auto-incrementante.</td>
+                </tr>
+                <tr>
+                    <td><code>cli_nome: varchar</code></td>
+                    <td>Nome del cliente (Es: Procura della Repubblica Tribunale di Napoli)</td>
+                </tr>
+                <tr>
+                    <td><code>cli_citta: varchar</code></td>
+                    <td>Città in cui si trova il cliente</td>
+                </tr>
+                <tr>
+                    <td><code>is_ctp: tinyint</code></td>
+                    <td>0 | 1. Se abilitato a 1 il cliente è una ctp</td>
+                </tr>
+                <tr>
+                    <td><code>is_procura: tinyint</code></td>
+                    <td>0 | 1. Se abilitato a 1 il cliente è una procura</td>
+                </tr>
+                <tr>
+                    <td><code>is_tribunale: tinyint</code></td>
+                    <td>0 | 1. Se abilitato a 1 il cliente è una tribunale</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA PM -->
+            <table>
+                <thead>
+                <th>PM</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>pm_id: int</code></td>
+                    <td>Id auto-incrementante.</td>
+                </tr>
+                <tr>
+                    <td><code>pm_nome: varchar</code></td>
+                    <td>Nome del PM (pubblico ministero)</td>
+                </tr>
+                <tr>
+                    <td><code>pm_cognome: varchar</code></td>
+                    <td>Cognome del PM</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_cli: tinyint</code></td>
+                    <td>Chiave esterna relativa all'ID del cliente</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA CASO -->
+            <table>
+                <thead>
+                <th>CASO</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ca_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ca_num: varchar</code></td>
+                    <td>Numero del caso / anno</td>
+                </tr>
+                <tr>
+                    <td><code>ca_inc: varchar</code></td>
+                    <td>Incarico. (giorno o numero dell'incarico)</td>
+                </tr>
+                <tr>
+                    <td><code>ca_tipo: varchar</code></td>
+                    <td>Tipologia del caso (penale | civile)</td>
+                </tr>
+                <tr>
+                    <td><code>ca_dss: varchar</code></td>
+                    <td>Etichetta del disco in cui sono conservati i dati del caso corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ca_datains: date</code></td>
+                    <td>Data in cui è stato inserito il caso nel DB</td>
+                </tr>
+                <tr>
+                    <td><code>ca_datadel: date</code></td>
+                    <td>Data di eliminazione del caso</td>
+                </tr>
+                <tr>
+                    <td><code>ca_ggres: smallint</code></td>
+                    <td>Giorni restanti alla scadenza</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_pm: int</code></td>
+                    <td>Chiave esterna relativa all'ID del PM a cui appartiene il caso corrente</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA INDAGATO -->
+            <table>
+                <thead>
+                <th>INDAGATO</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ind_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ind_titolo: varchar</code></td>
+                    <td>Tipologia (indagato, persona offesa, imputato, proprietario dispositivo)</td>
+                </tr>
+                <tr>
+                    <td><code>ind_nome: varchar</code></td>
+                    <td>Nome</td>
+                </tr>
+                <tr>
+                    <td><code>ind_cognome: varchar</code></td>
+                    <td>Cognome</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_caso: int</code></td>
+                    <td>Chiave esterna relativa all'Id del caso a cui appartiene l'indagato corrente</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA HOST -->
+            <table>
+                <thead>
+                <th>HOST</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ho_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ho_etichetta: varchar</code></td>
+                    <td>Etichetta dell'host (es. PCASS, CELSAM, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_seriale: varchar</code></td>
+                    <td>Serial number del dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>ho_pwd: varchar</code></td>
+                    <td>Password del dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>ho_pwd_used: tinyint</code></td>
+                    <td>0 | 1. Se il campo è 1 allora la password è stata utilizzata per le operazioni di acquisizione.</td>
+                </tr>
+                <tr>
+                    <td><code>ho_tipo: varchar</code></td>
+                    <td>Tipologia di Host (ES: Workstation, Notebook, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_modello: varchar</code></td>
+                    <td>Model number del dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>ho_pathfoto: varchar</code></td>
+                    <td>Percorso della directory in cui si trovano le foto relative all'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image1: varchar</code></td>
+                    <td>Nome della prima immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image2: varchar</code></td>
+                    <td>Nome della seconda immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image3: varchar</code></td>
+                    <td>Nome della terza immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image4: varchar</code></td>
+                    <td>Nome della quarta immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image_docx: varchar</code></td>
+                    <td>Nome della prima imagine scelta per la visualizzazione delle info utili ad essere incollate in consulenza (documento .docx)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image_docx2: varchar</code></td>
+                    <td>Nome della seconda imagine scelta per la visualizzazione delle info utili ad essere incollate in consulenza (documento .docx)</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_caso: int</code></td>
+                    <td>Chiave esterna relativa all'Id del caso a cui appartiene l'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_indagato: int</code></td>
+                    <td>Chiave esterna relativa all'Id dell' indagato a cui appartiene l'host corrente</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA EVIDENCE -->
+            <table>
+                <thead>
+                <th>EVIDENCE</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>evi_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>evi_etichetta: varchar</code></td>
+                    <td>Etichetta dell'evidence (ES: HDSEAGATE, MSDKINGSTON, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>evi_tipo: varchar</code></td>
+                    <td>Tipologia di evidence (Hard disk, Memory Card, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>evi_modello: varchar</code></td>
+                    <td>Model number dell'evidence</td>
+                </tr>
+                <tr>
+                    <td><code>evi_seriale: tinyint</code></td>
+                    <td>Serial Number dell'evidence</td>
+                </tr>
+                <tr>
+                    <td><code>evi_pwd: varchar</code></td>
+                    <td>Password dell'evidence</td>
+                </tr>
+                <tr>
+                    <td><code>evi_pwd_used: tinyint</code></td>
+                    <td>0 | 1. Se il campo è 1 allora la password è stata utilizzata per acquisire l'evidence.</td>
+                </tr>
+                <tr>
+                    <td><code>evi_dimensione: varchar</code></td>
+                    <td>Dimensione dell'evicende (solo il numero)</td>
+                </tr>
+                <tr>
+                    <td><code>evi_kbmbgbtb: varchar</code></td>
+                    <td>Dimensione dell'evidence (specificare se sono KB,MB,GB,TB)</td>
+                </tr>
+                <tr>
+                    <td><code>evi_pathfoto: varchar</code></td>
+                    <td>Percorso della directory in cui si trovano le foto relative all'evidence corrente</td>
+                </tr>
+                <tr>
+                    <td><code>evi_image1: varchar</code></td>
+                    <td>Nome della prima immagine (comprensivo di estensione) dell'evidence corrente</td>
+                </tr>
+                <tr>
+                    <td><code>evi_image2: varchar</code></td>
+                    <td>Nome della seconda immagine (comprensivo di estensione) dell'evidence corrente</td>
+                </tr>
+                <tr>
+                    <td><code>evi_image3: varchar</code></td>
+                    <td>Nome della terza immagine (comprensivo di estensione) dell'evidence corrente</td>
+                </tr>
+                <tr>
+                    <td><code>evi_image_docx: varchar</code></td>
+                    <td>Nome della prima imagine scelta per la visualizzazione delle info utili ad essere incollate in consulenza (documento .docx)</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_host: int</code></td>
+                    <td>Chiave esterna relativa all'Id dell'host a cui appartiene l'evidence corrente</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA HOST SPECIAL -->
+            <table>
+                <thead>
+                <th>HOST SPECIAL</th>
+                <th>NOTE: rientrano negli host special tutti quei dispositivi che sarebbero degli evidence se appartenessero ad un Host normale. Siccome spesso vengono rinvenuti dispositivi (ES: hard disk, pen drive, ecc...) non appartenenti ad un PC, Notebook; allora rientrano tra gli host special</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ho_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ho_etichetta: varchar</code></td>
+                    <td>Etichetta dell'host (es. HDSEAGATE, PDKINGSTON, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_seriale: varchar</code></td>
+                    <td>Serial number del dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>ho_tipo: varchar</code></td>
+                    <td>Tipologia di Host (ES: Workstation, Notebook, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_modello: varchar</code></td>
+                    <td>Model number del dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>ho_dimensione: varchar</code></td>
+                    <td>Dimensione dell'host / dispositivo (solo il numero)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_kbmbgbtb: varchar</code></td>
+                    <td>Dimensione dell'host / dispositivo (specificare se sono KB,MB,GB o TB)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_pathfoto: varchar</code></td>
+                    <td>Percorso della directory in cui si trovano le foto relative all'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image1: varchar</code></td>
+                    <td>Nome della prima immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image2: varchar</code></td>
+                    <td>Nome della seconda immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image3: varchar</code></td>
+                    <td>Nome della terza immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image4: varchar</code></td>
+                    <td>Nome della quarta immagine (comprensivo di estensione) dell'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image_docx: varchar</code></td>
+                    <td>Nome della prima imagine scelta per la visualizzazione delle info utili ad essere incollate in consulenza (documento .docx)</td>
+                </tr>
+                <tr>
+                    <td><code>ho_image_docx2: varchar</code></td>
+                    <td>Nome della seconda imagine scelta per la visualizzazione delle info utili ad essere incollate in consulenza (documento .docx)</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_caso: int</code></td>
+                    <td>Chiave esterna relativa all'Id del caso a cui appartiene l'host corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_indagato: int</code></td>
+                    <td>Chiave esterna relativa all'Id dell' indagato a cui appartiene l'host corrente</td>
+                </tr>
+            </table>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA CLONE -->
+            <table>
+                <thead>
+                <th>CLONE</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>clo_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>clo_tipoacq: varchar</code></td>
+                    <td>Tipologia di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_altro_tipo: varchar</code></td>
+                    <td>Altra tipologia di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_stracq: varchar</code></td>
+                    <td>Strumento di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_md5: varchar</code></td>
+                    <td>MD5 calcolata dallo strumento di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_sha1: varchar</code></td>
+                    <td>SHA1 calcolata dallo strumento di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_sha256: varchar</code></td>
+                    <td>SHA256 calcolata dallo strumento di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>clo_log: varchar</code></td>
+                    <td>Nome del LOG (comprensivo di estensione)</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_evi: int</code></td>
+                    <td>Chiave esterna relativa all'id dell'evidence a cui appartiene il log corrente</td>
+                </tr>
+                <tr>
+                    <td><code>ex_id_host_special: int</code></td>
+                    <td>Chiave esterna relativa all'id dell'host special a cui appartiene il log corrente</td>
+                </tr>
+            </table>
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA LAVORAZIONE -->
+            <table>
+                <thead>
+                <th>LAVORAZIONE</th>
+                <th>NOTE: questa tabella contiene le info relative allo stato di lavorazione di un determinato incarico e quale operatore se ne stà occupando</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>numero: varchar</code></td>
+                    <td>Numero del caso</td>
+                </tr>
+                <tr>
+                    <td><code>pm: varchar</code></td>
+                    <td>PM responsabile dell'indagine</td>
+                </tr>
+                <tr>
+                    <td><code>procura: varchar</code></td>
+                    <td>Procura che stà portando avanti l'indagine</td>
+                </tr>
+                <tr>
+                    <td><code>dinizio: varchar</code></td>
+                    <td>Data di inizio dell'incarico conferito</td>
+                </tr>
+                <tr>
+                    <td><code>gg: varchar</code></td>
+                    <td>Giorni permessi dal PM per portare a termine l'incarico</td>
+                </tr>
+                <tr>
+                    <td><code>dfine: varchar</code></td>
+                    <td>Data di scadenza per la consegna della consulenza</td>
+                </tr>
+                <tr>
+                    <td><code>ggrestanti: varchar</code></td>
+                    <td>Giorni restanti alla scadenza dell'incarico</td>
+                </tr>
+                <tr>
+                    <td><code>copia: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 la copia è stata eseguita. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>ftk: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stato importato il caso in FTK. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>ief: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stato analizzato con IEF(Internet Evidence Finder della Magnet Forensics). Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>analisi: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stata completata la fase di analisi. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>exprep: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stata completata la fase di reportistica. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>dim: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stata completata la documentazione tecnica dei dispositivi. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>allegati: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 è stata completata la fase di imbustamento degli allegati con relative etichette incollate su di essi. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>liquidazione: tinyint</code></td>
+                    <td>Flag: 0|1|NO. Se impostato a 1 la consulenza è stata pagata dal cliente. Se impostato a NO, non vi è necessità.</td>
+                </tr>
+                <tr>
+                    <td><code>difficolta: tinyint</code></td>
+                    <td>Flag: ROSSO|GIALLO|VERDE. ROSSO=Caso complesso/di dimensioni notevoli, GIALLO=media difficoltà/medie dimensioni, VERDE=difficoltà semplice/piccole dimensioni</td>
+                </tr>
+                <tr>
+                    <td><code>progresso: tinyint</code></td>
+                    <td>Valore rappresentante la % di avanzamento del lavoro</td>
+                </tr>
+                <tr>
+                    <td><code>note: varchar</code></td>
+                    <td>Eventuali note (ES: in attesa di consegna dei PIN/password, ecc...)</td>
+                </tr>
+                <tr>
+                    <td><code>operatore: varchar</code></td>
+                    <td>Nome dell'operatore che si sta occupando del caso</td>
+                </tr>
+                <tr>
+                    <td><code>last_upd_ggrestanti: date</code></td>
+                    <td>Data dell'ultimo aggiornamento dei giorni restanti alla scadenza dell'incarico</td>
+                </tr>
+            </table>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA MAGAZZINO -->
+            <table>
+                <thead>
+                <th>MAGAZZINO</th>
+                <th>NOTE: questa tabella contiene le info relative al numero di "colli" da riconsegnare relativamente ad un determinato incarico/caso</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>procura: varchar</code></td>
+                    <td>Procura che stà portando avanti l'indagine</td>
+                </tr>
+                <tr>
+                    <td><code>pm: varchar</code></td>
+                    <td>PM responsabile dell'indagine</td>
+                </tr>
+                <tr>
+                    <td><code>dossier: varchar</code></td>
+                    <td>Numero del caso/dossier</td>
+                </tr>
+                <tr>
+                    <td><code>plico: tinyint</code></td>
+                    <td>Numero di plichi</td>
+                </tr>
+                <tr>
+                    <td><code>dataC: date</code></td>
+                    <td>Data di consegna</td>
+                </tr>
+                <tr>
+                    <td><code>note: varchar</code></td>
+                    <td>Eventuali note</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA TIPO_ACQUISIZIONE -->
+            <table>
+                <thead>
+                <th>TIPO ACQUISIZIONE</th>
+                <th>NOTE: questa tabella contiene le tipologie di acquisizione degli evidence</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>acq_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>acq_tipo: varchar</code></td>
+                    <td>Tipologia di acquisizione</td>
+                </tr>
+                <tr>
+                    <td><code>acq_icon: varchar</code></td>
+                    <td>Nome dell'icona (comprensivo di estensione) rappresentante graficamente la tipologia di acquisizione</td>
+                </tr>
+            </table>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- TABELLA TIPO_EVIDENCE -->
+            <table>
+                <thead>
+                <th>TIPO EVIDENCE</th>
+                <th>NOTE: questa tabella contiene le tipologie degli evidence</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>evi_id_tipo: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>evi_tipo: varchar</code></td>
+                    <td>Tipologia di evidence</td>
+                </tr>
+                <tr>
+                    <td><code>evi_default: tinyint</code></td>
+                    <td>0|1. Se impostato a 1 non è eliminabile. Se impostato a 0 è eliminabile.</td>
+                </tr>
+                <tr>
+                    <td><code>evi_icon: varchar</code></td>
+                    <td>Nome dell'icona (comprensivo di estensione) rappresentante graficamente la tipologia di evidence</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+            <!-- TABELLA TIPO_HOST -->
+            <table>
+                <thead>
+                <th>TIPO HOST</th>
+                <th>NOTE: questa tabella contiene le tipologie degli host</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ho_id_tipo: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ho_tipo: varchar</code></td>
+                    <td>Tipologia di host</td>
+                </tr>
+                <tr>
+                    <td><code>ho_default: tinyint</code></td>
+                    <td>0|1. Se impostato a 1 non è eliminabile. Se impostato a 0 è eliminabile.</td>
+                </tr>
+                <tr>
+                    <td><code>ho_icon: varchar</code></td>
+                    <td>Nome dell'icona (comprensivo di estensione) rappresentante graficamente la tipologia di host</td>
+                </tr>
+            </table>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+            <!-- TABELLA TIPO_HOST_SPECIAL -->
+            <table>
+                <thead>
+                <th>TIPO HOST SPECIAL</th>
+                <th>NOTE: questa tabella contiene le tipologie degli host special</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>hos_id_tipo: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>hos_tipo: varchar</code></td>
+                    <td>Tipologia di host special</td>
+                </tr>
+                <tr>
+                    <td><code>hos_default: tinyint</code></td>
+                    <td>0|1. Se impostato a 1 non è eliminabile. Se impostato a 0 è eliminabile.</td>
+                </tr>
+                <tr>
+                    <td><code>hos_icon: varchar</code></td>
+                    <td>Nome dell'icona (comprensivo di estensione) rappresentante graficamente la tipologia di host special</td>
+                </tr>
+            </table>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- TABELLA UTENTI -->
+            <table>
+                <thead>
+                <th>UTENTI</th>
+                <th>NOTE: questa tabella contiene gli utenti di CFCM con relative credenziali di login</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>ute_id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>ute_username: varchar</code></td>
+                    <td>Username</td>
+                </tr>
+                <tr>
+                    <td><code>ute_password: varchar</code></td>
+                    <td>Password in formato MD5</td>
+                </tr>
+                <tr>
+                    <td><code>ute_nome: varchar</code></td>
+                    <td>Nome dell'utente</td>
+                </tr>
+                <tr>
+                    <td><code>ute_cognome: varchar</code></td>
+                    <td>Cognome dell'utente</td>
+                </tr>
+                <tr>
+                    <td><code>ute_isadmin: int</code></td>
+                    <td>0|1. Se impostato a 1 può visualizzare le impostazioni di amministrazione</td>
+                </tr>
+            </table>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- TABELLA TOOLS -->
+            <table>
+                <thead>
+                <th>TOOLS</th>
+                <th>NOTE: questa è una tabella di appoggio temporaneo di informazioni utili ai tools di supporto al lavoro con FTK</th>
+                </thead>
+                <th>Campo</th>
+                <th>Descrizione</th>
+                <tr>
+                    <td><code>id: int</code></td>
+                    <td>Id auto-incrementante</td>
+                </tr>
+                <tr>
+                    <td><code>item: int</code></td>
+                    <td>Item number degli elementi presenti nello strumento Ftk Toolkit</td>
+                </tr>
+                <tr>
+                    <td><code>path: varchar</code></td>
+                    <td>Path degli elementi presenti in un dispositivo analizzato tramite Ftk toolkit</td>
+                </tr>
+                <tr>
+                    <td><code>md5: varchar</code></td>
+                    <td>MD5 relativi agli elementi presenti in Ftk Toolkit</td>
+                </tr>
+            </table>
+
+
+
+        </div>
+    <br>
+    <br>
+    </body>
+</html>

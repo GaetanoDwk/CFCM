@@ -1,0 +1,70 @@
+<html>
+    <title>Documentazione CFCM</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='Documentazione tecnica di CFCM'>
+    <meta name='author' content='Gaetano'>
+    <!-- MOBILE META -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <head>
+        <link rel='stylesheet' href='../font/awesome407/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='css/style.css'>
+    </head>
+
+    <body>
+        <br>
+        <div style="position: absolute; left: 20%"><a href="index.html"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a></div>
+        <div class="container">
+            <center><h1>Flusso di esecuzione</h1></center>
+            <p>La web application è stata strutturata seguendo una logica MVC (Model View Controller).
+                <br>I files relativi ai model, controller e view sono presenti nelle rispettive directory /Modello, /Controllo e /Vista.
+                <br>Le classi presenti in  <b>/Modello</b> si occupano degli inserimenti, modifiche, eliminazioni dal DB.
+                <br>Le classi presenti in  <b>/Controllo</b> si occupano della logica di esecuzione.
+                <br>Le classi presenti in <b>/Vista</b> si occupano della visualizzazione delle pagine / rappresentazione grafica dei dati.
+            <br>Il file <code>index.php</code> fa da "router" per indirizzare il flusso di esecuzione alle giuste classi e funzioni.
+            <br>Di seguito viene illustrato; tramite degli esempi di ipotetico utilizzo dell'applicativo; come comprendere il flusso di esecuzione della web app.</p>
+            <ul>
+                <li><p>1° Step: da browser recarsi all'indirizzo <b>localhost/cfcm</b> oppure <b>indirizzo-server/cfcm</b>
+                    <br>Viene interpretato ed eseguito il file <b>index.php</b>
+                    <br>Al primo accesso la variabile globale <code>$_REQUEST["comando"]</code> non è settata; quindi viene settata automaticamente con il valore <code>firstpage</code> per condurre alla pagina di login.
+                    <br>A questo punto viene invocato il controller istanziato da codice con <code>$controllo = new Controllo();</code> nella variabile <code>$controllo</code>
+                    <h4>Index.php</h4></p>
+                    <img src="img/flusso1.png" title="index.php">
+                </li>
+                <br>
+                <li><p>2° Step: a questo punto data l'invocazione precedente del controller, il flusso, passa al controller denominato <code>Controllo.php</code> che tramite uno switch-case va a selezionare la funzinoe <code>firstpage</code> per la stampa della pagina iniziale dell'applicativo.
+                    <h4>Controllo.php</h4></p>
+                    <img src="img/flusso2.png" title="controllo.php">
+                    <p>Come si può apprendere dai commenti, in caso sia il primo accesso, allora stampa la pagina di login; altrimenti in caso l'accesso sia già stato eseguito e presente nel file di sessione relativo all'utente (posizionato da xampp nel path <code>C:\xampp\tmp</code>) allora caricherà la pagina del menù iniziale.</p>
+                </li>
+                <br>
+                <li><p>3° Step: ipotizziamo di essere già loggati e il flusso e venga quindi eseguita la porzione di codice in cui viene chiamata la funzione <code>menu_procure()</code>
+                    <h4>Controllo.php</h4></p>
+                    <img src="img/flusso3.png" title="controllo.php">
+                    <p>Come da commento nel codice, questa funzione visualizza il menù iniziale.
+                        <br><code>$this->CntCaso->checkScadenze();</code> controlla se ci sono casi in scadenza. (la validità di un caso sono 365 giorni)
+                        <br>Questa funzione non è correlata con le scadenze degli incarichi presente nella gestione dell'avanzamento delle lavorazioni.'
+                        <br><code>$_SESSION['cli_type]</code> viene valorizzata con 'P' se il cliente è una procura, 'T' se è un tribunale, 'C' se è una CTP; questo perché serve a decidere quali valori assegnare ai tasti "indietro" e "home"
+                        <br></p>
+                        <img src="img/ind-home.png" style="border: solid black 1px;">
+                        <p>Successivamente vengono selezionati i dati in opportuni array che vengono passati alla funzione di stampa del menù principale <code>HTML_menu_procure()</code></p>
+                        <h4>HtmlProcura.php</h4>
+                        <img src="img/flusso4.PNG">
+                </li>
+                <br>
+                <li><p>4° Step: ipotizziamo di cliccare sulla voce "PROCURE" del menù principale.
+                    <br>Tramite lo strumento per sviluppatori del browser, accessibile con il tasto F12, possiamo analizzare la struttura del bottone "PROCURE" e capire dove sarà diretto il flusso di esecuzione quando sarà cliccato.</p>
+                    <img src="img/flusso5.png" style="border: solid black 1px;">
+                    <p>Tramite i campi <b>action</b>, <b>name</b> e <b>value</b> è possibile direzionare il flusso di esecuzione.
+                    <br>Cliccando il bottone il flusso sarà direzionato sul file <b>index.php</b> in cui è presente lo switch-case che andrà a selezionare la voce <b>view_procure</b> che causerà l'invocazione del <b>ControllerCliente</b> a cui passerà il <b>$comando</b> che in questo caso contiene il valore <b>view_procure</b>.</p>
+                    <img src="img/flusso6.png">
+                    <p>A questo punto il flusso passa in <b>ControllerCliente.php</b> che a sua volta tramite un suo switch-case andrà a selezionare la voce <b>view_procure</b> in cui sarà chiamata la funzione privata <b>view_procure</b></p>
+                    <img src="img/flusso7.png">
+                    <p>A questo punto per poter visualizzare la lista delle procure; la funzione và a selezionare tutte le procure invocando la funzione <b>select_procure()</b> presente all'interno della classe <b>ModelProcura</b>. Una volta ottenuto il risultato sotto-forma di array-associativo <code>$Procure</code>; questo sarà passato alla funzione di visualizzazione <b>HTML_procure($Procure)</b> che provvederà a stamparlo a video con le opportune formattazioni html</p>
+                </li>
+            </ul>
+            <p>Di seguito uno schema riassuntivo del flusso di esecuzione:</p>
+            <img src="img/flusso8.png" style="border: solid black 1px;">
+        </div>
+    </body>
+</html>
