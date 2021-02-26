@@ -82,4 +82,4 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 </ol>
 
 <h2>Generazione di reports PDF</h2>
-<p>Per adesso CFCM non integra una libreria per la generazione di PDF ma si può sopperire a ciò utilizzando un software come <li><a href="https://www.pdfforge.org/pdfcreator">Pdf Creator (consigliato)</a> o similari.</p>
+<p>Per adesso CFCM non integra una libreria per la generazione di PDF ma si può sopperire a ciò utilizzando un software come <a href="https://www.pdfforge.org/pdfcreator">Pdf Creator (consigliato)</a> o similari.</p>
