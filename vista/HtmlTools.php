@@ -157,10 +157,13 @@ class HtmlTools
                 <br><br>
                 <i class='fa fa-whatsapp fa-4x' aria-hidden='true'></i>
                 <br><br>
-                <h6 class='docs-header'>UTILIZZANDO UFED READER ESPORTA LA CHAT, IN FORMATO EXCEL, NELLA CARTELLA CONDIVISA UFEDTOOLS</h6>
+                <h6 class='docs-header'>UTILIZZANDO UFED READER ESPORTA LA CHAT, IN FORMATO EXCEL, NELLA CARTELLA CONDIVISA UFEDTOOLS</h6>                
                 <img src='images/ufed_excel.png' style='border: 1px solid; height: 200px;'>
                 <img src='images/ufedtools_shared.png' style='border: 1px solid; height: 200px;'>
-                <br><br><hr>
+                <br>
+                <h6 class='docs-header'>PRIMA DI LANCIARE LA GENERAZIONE DELLA CHAT ASSICURARSI CHE NEL RAPPORTO XLSX SIANO PRESENTI SOLAMENTE LE SEGUENTI COLONNE:</h6>
+                <img src='images/pattern.png' style='border: 1px solid;'>
+                <hr>
                 <h6 class='docs-header'>GENERA UNA CHAT</h6>
                 <table class=\"u-full-width\">
                     <thead style='color: #1188FF'>
@@ -902,18 +905,18 @@ class HtmlTools
         // Variabili
 
             $Da = $row[1];
-            $A = $row[2];
-            $Orien = $row[3];
-            $Corpo = $row[5];
-            $Orari = $row[9];
-            $Alle1 = $row[14];
-            $Elimi = $row[18];
+            $Orien = $row[2];
+            $Corpo = $row[3];
+            $Orari = $row[4];
+            $Alle1 = $row[5];
+            $Alle2 = $row[6];
+            $Elimi = $row[7];
 
 
 
-            $pathAudio = $ChatPath . "files/Audio/$Alle1";
-            $pathImage = $ChatPath . "files/Image/$Alle1";
-            $pathVideo = $ChatPath . "files/Video/$Alle1";
+            //$pathAudio = $ChatPath . "files/Audio/$Alle1";
+            //$pathImage = $ChatPath . "files/Image/$Alle1";
+            //$pathVideo = $ChatPath . "files/Video/$Alle1";
 
         // Pulisco
         $Da = str_replace("@s.whatsapp.net","", $Da);
@@ -926,29 +929,15 @@ class HtmlTools
                         <div style='background-color: #3ca0e5;'><b>$Da</b></div>
                         <b>". $Corpo ."</b>
              ";
-                        if($Alle1 != ''){
-                            if(strpos($Alle1, '.opus') == true){
-                                echo "<a href='$pathAudio' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle1</b>";
-                                //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
-                            }
-                            if(strpos($Alle1, '.jpg') == true){
-                                echo"<br><a href='$pathImage' target='_blank'><img src='$pathImage' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
-                            }
-                            if(strpos($Alle1, '.mp4') == true){
-                                echo "<a href='$pathVideo' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle1</b>";
-                            }
-                        }
-
-                        if(($Elimi == 'Sì') || ($Elimi == 'Yes')){
-                            echo"<div style='position: relative; left: 0px;'><img src='icons/eliminato_b.PNG'>
-                                    <b style='position: relative; left: 65px'>". $Orari ."</b>
-                                 </div>";
-                        }
-                        else {
-                            echo"<div style='position: relative; left: 85px'><b>". $Orari ."</b></div>";
-
-                        }
-
+            $this->print_allegati_ricevuti($ChatPath, $Alle1, $Alle2);
+            if(($Elimi == 'Sì') || ($Elimi == 'Yes')){
+                echo"<div style='position: relative; left: 0px;'><img src='icons/eliminato_b.PNG'>
+                        <b style='position: relative; left: 65px'>". $Orari ."</b>
+                            </div>";
+            }
+            else {
+                echo"<div style='position: relative; left: 85px'><b>". $Orari ."</b></div>";
+            }
             echo"    </div>";
         }
 
@@ -960,18 +949,7 @@ class HtmlTools
                     <div style='background-color: #72ca54'><b>$Da</b></div>
                         <b>" . $Corpo . "</b>
             ";
-                        if($Alle1 != ''){
-                                if(strpos($Alle1, '.opus') == true){
-                                    echo "<a href='$pathAudio' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle1</b>";
-                                    //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
-                                }
-                                if(strpos($Alle1, '.jpg') == true){
-                                    echo"<br><a href='$pathImage' target='_blank'><img src='$pathImage' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
-                                }
-                            if(strpos($Alle1, '.mp4') == true){
-                                echo "<a href='$pathVideo' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle1</b>";
-                            }
-                        }
+            $this->print_allegati_inviati($ChatPath, $Alle1, $Alle2);
 
             if(($Elimi == 'Sì') || ($Elimi == 'Yes')){
                 echo"<div style='position: relative; left: 0px;'><img src='icons/eliminato_v.png'>
@@ -995,17 +973,7 @@ class HtmlTools
                     <div style='background-color: #cac6c6;'><b>$Da</b></div>
                         <b>" . $Corpo . "</b><br>
             ";
-                            if($Alle1 != ''){
-                                if(strpos($Alle1, '.opus') == true){
-                                    echo "<a href='$pathAudio' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle1</b>";
-                                }
-                                if(strpos($Alle1, '.jpg') == true){
-                                    echo"<br><a href='$pathImage' target='_blank'><img src='$pathImage' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
-                                }
-                                if(strpos($Alle1, '.mp4') == true){
-                                    echo "<a href='$pathVideo' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle1</b>";
-                                }
-                            }
+            $this->print_allegati_nonrilevati($ChatPath, $Alle1, $Alle2);
 
             if(($Elimi == 'Sì') || ($Elimi == 'Yes')){
                 echo"<div style='position: relative; left: 0px;'><img src='icons/eliminato_g.png'>
@@ -1016,17 +984,115 @@ class HtmlTools
                 echo"<div style='position: relative; left: 85px'><b>". $Orari ."</b></div>";
 
             }
-
-
-                        echo"</div>";
+            echo"</div>";
         }
     }
-	             
-	             
-
-             echo"<br></div>";
+        echo"<br></div>";
 
     }
+
+
+
+    public function print_allegati_ricevuti($ChatPath, $Alle1, $Alle2)
+    {
+        $pathAudio = $ChatPath."files/Audio/";
+        $pathImage = $ChatPath."files/Image/";
+        $pathVideo = $ChatPath."files/Video/";
+
+        if($Alle1 != ''){
+            if(strpos($Alle1, '.opus') == true){
+                echo "<a href='$pathAudio$Alle1' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle1</b>";
+                //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
+            }
+            if(strpos($Alle1, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle1' target='_blank'><img src='$pathImage$Alle1' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
+            }
+            if(strpos($Alle1, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle1' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle1</b>";
+            }
+        }
+
+        if($Alle2 != ''){
+            if(strpos($Alle2, '.opus') == true){
+                echo "<a href='$pathAudio$Alle2' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle2</b>";
+                //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
+            }
+            if(strpos($Alle2, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle2' target='_blank'><img src='$pathImage$Alle2' width='30%' height='8%'></a>&nbsp<b>$Alle2</b>";
+            }
+            if(strpos($Alle2, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle2' target='_blank'><img src='icons/AudioRicevuto.PNG'></a><b>&nbsp$Alle2</b>";
+            }
+        }
+
+    }
+
+    public function print_allegati_inviati($ChatPath, $Alle1, $Alle2)
+    {
+        $pathAudio = $ChatPath."files/Audio/";
+        $pathImage = $ChatPath."files/Image/";
+        $pathVideo = $ChatPath."files/Video/";
+
+        if($Alle1 != ''){
+            if(strpos($Alle1, '.opus') == true){
+                echo "<a href='$pathAudio$Alle1' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle1</b>";
+                //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
+            }
+            if(strpos($Alle1, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle1' target='_blank'><img src='$pathImage$Alle1' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
+            }
+            if(strpos($Alle1, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle1' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle1</b>";
+            }
+        }
+        if($Alle2 != ''){
+            if(strpos($Alle2, '.opus') == true){
+                echo "<a href='$pathAudio$Alle2' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle2</b>";
+                //echo "<audio controls><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'><source src='instant_messages/WhatsApp/1/". $nomefile."' type='audio/ogg; codecs=opus'></audio>";
+            }
+            if(strpos($Alle2, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle2' target='_blank'><img src='$pathImage$Alle2' width='30%' height='8%'></a>&nbsp<b>$Alle2</b>";
+            }
+            if(strpos($Alle2, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle2' target='_blank'><img src='icons/AudioInviato.PNG'></a><b>&nbsp$Alle2</b>";
+            }
+        }
+
+    }
+
+    public function print_allegati_nonrilevati($ChatPath, $Alle1, $Alle2)
+    {
+        $pathAudio = $ChatPath."files/Audio/";
+        $pathImage = $ChatPath."files/Image/";
+        $pathVideo = $ChatPath."files/Video/";
+
+        if($Alle1 != ''){
+            if(strpos($Alle1, '.opus') == true){
+                echo "<a href='$pathAudio$Alle1' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle1</b>";
+            }
+            if(strpos($Alle1, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle1' target='_blank'><img src='$pathImage$Alle1' width='30%' height='8%'></a>&nbsp<b>$Alle1</b>";
+            }
+            if(strpos($Alle1, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle1' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle1</b>";
+            }
+        }
+        if($Alle2 != ''){
+            if(strpos($Alle2, '.opus') == true){
+                echo "<a href='$pathAudio$Alle2' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle2</b>";
+            }
+            if(strpos($Alle2, '.jpg') == true){
+                echo"<br><a href='$pathImage$Alle2' target='_blank'><img src='$pathImage$Alle2' width='30%' height='8%'></a>&nbsp<b>$Alle2</b>";
+            }
+            if(strpos($Alle2, '.mp4') == true){
+                echo "<a href='$pathVideo$Alle2' target='_blank'><img src='icons/AudioNonRilevato.PNG'></a><b>&nbsp$Alle2</b>";
+            }
+        }
+
+    }
+
+
+
 
 
     /**

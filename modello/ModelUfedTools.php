@@ -20,12 +20,21 @@ class ModelUfedTools {
      */
     public function get_rapporto_xls($ChatPath)
     {
-        //CARICO IL FILE Rapporto.xlsx IN UN OGGETTO DI TIPO PHPExcel
-        $excelObj = PHPExcel_IOFactory::load($ChatPath . "Rapporto.xlsx");
-        //CARICO IL CONTENUTO DELL'OGGETTO IN UN ARRAY
-        $arrChat = $excelObj->getActiveSheet()->toArray(null);
-        //RITORNA L'ARRAY CON ALL'INTERNO I DATI DELLA CHAT
-        return $arrChat;
+        // Trovo il nome del file excel nella folder della chat
+        $rapporto = glob($ChatPath.'*.xlsx');
+        try{
+            //CARICO IL FILE XLSX DEL RAPPORTO IN UN OGGETTO DI TIPO PHPExcel
+            $excelObj = PHPExcel_IOFactory::load($rapporto[0]);
+            //CARICO IL CONTENUTO DELL'OGGETTO IN UN ARRAY
+            $arrChat = $excelObj->getActiveSheet()->toArray(null);
+            //RITORNA L'ARRAY CON ALL'INTERNO I DATI DELLA CHAT
+            return $arrChat;
+        }
+        catch (Exception $e)
+        {
+            echo("<h3> Eccezione</h3>". $e);
+            exit(1);
+        }
     }
 
 }
