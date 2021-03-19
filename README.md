@@ -2,7 +2,7 @@
 <img src=/images/logo.png height='200px'>
 Computer Forensic Case Manager<br>
 
-<p>CFCM è un gestionale open-source web based pensato per piccole aziende o singoli professionisti nel settore della computer forensic. Permette di gestire agevolmente le informazioni relative agli artefatti informatici ed infine generare una reportistica in pdf.
+<p>CFCM è un gestionale open-source web based pensato per piccole aziende o singoli professionisti nel settore della Digital Forensics. Permette di gestire agevolmente le informazioni relative agli artefatti informatici ed infine generare una reportistica in pdf.
 Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecnico forense utilizza spesso; come ad esempio Ftk Toolkit e Cellebrite Ufed Reader.</p>
 <h2>Pre-Requisiti</h2>
 <p>L'installazione del gestionale richiede la presenza dell'ambiente di sviluppo per PHP denominato <a href="https://www.apachefriends.org/index.html" rel="nofollow">Xampp (3.2.4 o superiore)</a><br>
@@ -61,7 +61,7 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
     Aprire il file <code>php.ini</code> presente in <code>C:\xampp\php</code> e modificare le seguenti linee:
     <ul>
       <li>Da <code>post_max_size = 15M</code> a <code>post_max_size = 50M</code> </li>
-      <li>Da <code>upload_max_filesize = 15M</code> a <code>upload_max_filesize = 15M</code></li>
+      <li>Da <code>upload_max_filesize = 15M</code> a <code>upload_max_filesize = 50M</code></li>
       <li>Da <code>max_execution_time = valore di default</code> a <code>max_execution_time = 120</code></li>
     </ul>
     In questo modo aumentate le dimensioni ammesse per il caricamento di files tramite POST e aumentate i secondi di esecuzione di una funzione fino ad un massimo di 120 secondi (in caso fosse necessario tale parametro può essere aumentato). 
