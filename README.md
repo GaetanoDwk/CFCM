@@ -57,18 +57,6 @@ Per procedere all'installazione è necessario seguire i seguenti punti:
 Infine vi sono alcune configurazioni da effettuare tra cui:
 <ol>
 <li>
-  <p>
-    Aprire il file <code>php.ini</code> presente in <code>C:\xampp\php</code> e modificare le seguenti linee:
-    <ul>
-      <li>Da <code>post_max_size = 15M</code> a <code>post_max_size = 50M</code> </li>
-      <li>Da <code>upload_max_filesize = 15M</code> a <code>upload_max_filesize = 50M</code></li>
-      <li>Da <code>max_execution_time = valore di default</code> a <code>max_execution_time = 120</code></li>
-    </ul>
-    In questo modo aumentate le dimensioni ammesse per il caricamento di files tramite POST e aumentate i secondi di esecuzione di una funzione fino ad un massimo di 120 secondi (in caso fosse necessario tale parametro può essere aumentato). 
-  </p>
-</li>
-
-<li>
     <p>Accedere al gestionale e recarsi nella sezione "Amministrazione/Azienda" ed aggiungere una nuova azienda per inserire le 
       informazioni che verrano successivamente stampate nel footer della copertina dei Report pdf.</p>
 </li>
