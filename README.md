@@ -1,6 +1,6 @@
 # CFCM
 <img src=/images/logo.png height='200px'>
-Computer Forensic Case Manager<br>
+Computer Forensics Case Manager<br>
 
 <p>CFCM è un gestionale open-source web based pensato per piccole aziende o singoli professionisti nel settore della Digital Forensics. Permette di gestire agevolmente le informazioni relative agli artefatti informatici ed infine generare una reportistica in pdf.
 Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecnico forense utilizza spesso; come ad esempio Ftk Toolkit e Cellebrite Ufed Reader.</p>
