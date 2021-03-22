@@ -247,7 +247,7 @@ class ControllerHost
         // Stampa pagina degli evidence dell'Host.
         $this->Html->HTML_header();
         $this->HtmlHost->HTML_host($NomeProcura, $NomePm, $NumCaso, $NomeIndagato, $IdHost, $NomeHost, $ho_pathfoto, $ho_image1, $ho_image2, $ho_image3, $ho_image4, $ImageDocx1, $ImageDocx2);
-        $this->HtmlEvidence->HTML_evidence_of_host($resEvid, $TipiEvidence);
+        $this->HtmlEvidence->HTML_evidence_of_host($resEvid);
         $this->Html->HTML_footer();
     }
 
@@ -455,12 +455,20 @@ class ControllerHost
      * La funzione fà il resize delle immagini passategli come parametri.
      */
     private function resize_imagejpg($file, $w, $h) {
-        list($width, $height) = getimagesize($file);
-        $src = imagecreatefromjpeg($file);
-        $dst = imagecreatetruecolor($w, $h);
-        imagecopyresampled($dst, $src, 0, 0, 0, 0, $w, $h, $width, $height);
-        // Restituisce dst che è un oggetto di tipo imagejpeg
-        return $dst;
+        try {
+            list($width, $height) = getimagesize($file);
+            $src = imagecreatefromjpeg($file);
+            $dst = imagecreatetruecolor($w, $h);
+            imagecopyresampled($dst, $src, 0, 0, 0, 0, $w, $h, $width, $height);
+            // Restituisce dst che è un oggetto di tipo imagejpeg
+            return $dst;
+        }
+        catch (Exception $e) {
+            print_r($e);
+            exit(1);
+        }
+
+
     }
 
 

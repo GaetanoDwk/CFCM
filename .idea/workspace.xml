@@ -1,8 +1,513 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="">
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="Sostituita classe per fogli xls">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/01-basic_usage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/02-rows_and_rowsEx.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/03-sheets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/04-upload_and_convert_to_html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/05-rows_with_header_values_as_keys.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/books.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/examples/countries_and_population.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplexlsx/src/SimpleXLSX.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phpinfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/ControllerHost.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerHost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Autoloader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/APC.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/ICache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/Memcache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/Memory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/SQLite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorage/Wincache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CachedObjectStorageFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/CalcEngine/Logger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/DateTime.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Engineering.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/ExceptionHandler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Financial.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/FormulaParser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/FormulaToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Function.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Logical.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/LookupRef.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/MathTrig.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Statistical.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/TextData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/Token/Stack.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Calculation/functionlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/AdvancedValueBinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/DataType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/DataValidation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/DefaultValueBinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/Hyperlink.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Cell/IValueBinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Axis.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/DataSeries.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/DataSeriesValues.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/GridLines.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Layout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Legend.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/PlotArea.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Properties.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Renderer/jpgraph.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Chart/Title.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Comment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/DocumentProperties.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/DocumentSecurity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/HashTable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Helper/HTML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/IComparable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/IOFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/NamedRange.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Abstract.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/CSV.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/DefaultReadFilter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel2003XML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel2007.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel2007/Chart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel2007/Theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Color/BIFF5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Color/BIFF8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Color/BuiltIn.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/ErrorCode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Escher.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/MD5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/RC4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Style/Border.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Excel5/Style/FillPattern.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/Gnumeric.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/HTML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/IReadFilter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/IReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/OOCalc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Reader/SYLK.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/ReferenceHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/RichText.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/RichText/ITextElement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/RichText/Run.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/RichText/TextElement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/CodePage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Date.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Drawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DgContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DggContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Excel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/Font.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/CHANGELOG.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/LUDecomposition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/Matrix.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/QRDecomposition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/utils/Error.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/JAMA/utils/Maths.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLE/PPS.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLE/PPS/File.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLE/PPS/Root.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/OLERead.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/PCLZip/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/PasswordHasher.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/String.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/TimeZone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/XMLWriter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/ZipArchive.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/ZipStreamWrapper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/bestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/exponentialBestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/linearBestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/logarithmicBestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/polynomialBestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/powerBestFitClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Shared/trend/trendClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Alignment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Border.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Borders.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Conditional.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Fill.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Font.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/NumberFormat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Protection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Style/Supervisor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/AutoFilter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/AutoFilter/Column.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/BaseDrawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/CellIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Column.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/ColumnCellIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/ColumnDimension.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/ColumnIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Dimension.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Drawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Drawing/Shadow.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/HeaderFooter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/MemoryDrawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/PageMargins.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/PageSetup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Protection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/Row.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/RowCellIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/RowDimension.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/RowIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Worksheet/SheetView.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/WorksheetIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Abstract.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/CSV.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Chart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Comments.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/ContentTypes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/DocProps.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Drawing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Rels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/RelsRibbon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/RelsVBA.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/StringTable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Style.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Workbook.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007/WriterPart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/BIFFwriter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Escher.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Font.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Parser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Workbook.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Worksheet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel5/Xf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/HTML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/IWriter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Cell/Comment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Content.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Meta.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/MetaInf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Mimetype.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Styles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/Thumbnails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/OpenDocument/WriterPart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/PDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/PDF/Core.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/PDF/DomPDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/PDF/mPDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/Writer/PDF/tcPDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/bg/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/cs/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/cs/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/da/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/da/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/de/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/de/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/en/uk/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/es/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/es/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/fi/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/fi/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/fr/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/fr/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/hu/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/hu/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/it/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/it/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/nl/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/nl/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/no/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/no/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pl/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pl/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pt/br/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pt/br/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pt/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/pt/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/ru/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/ru/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/sv/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/sv/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/tr/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Classes/PHPExcel/locale/tr/functions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DAVERAGE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DCOUNT.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DGET.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DMAX.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DMIN.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DPRODUCT.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DSTDEV.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DSTDEVP.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DVAR.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/Database/DVARP.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/DateTime/DATE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/DateTime/DATEVALUE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/DateTime/TIME.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/DateTime/TIMEVALUE.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Calculations/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader01.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader02.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader03.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader04.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader05.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader06.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader07.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader08.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader09.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader10.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader12.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader13.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader14.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader15.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader16.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader17.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader18.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/exampleReader19.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/sampleData/example1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/sampleData/example1.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/sampleData/example1.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/sampleData/example2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reader/sampleData/example2.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/exampleWorkBookReader01.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/exampleWorkBookReader02.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/exampleWorkBookReader03.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/exampleWorkBookReader04.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/sampleData/example1.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/sampleData/example1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/Reading WorkBook Data/sampleData/example2.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Examples/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/FunctionListByCategory.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/FunctionListByName.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/Functionality Cross-Reference.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/PHPExcel AutoFilter Reference developer documentation.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/PHPExcel Function Reference developer documentation.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/PHPExcel User Documentation - Reading Spreadsheet Files.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/PHPExcel developer documentation.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Architecture.cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Architecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/ClassDiagrams.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/ClassDiagrams.csproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/ClassDiagrams.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/IReader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/IWriter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_IOFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_Reader_Excel2007.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_Reader_Excel5.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_Reader_Serialized.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_Writer_Excel2007.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/PHPExcel_Writer_Serialized.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Classes/Worksheet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Exports/Architecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/Exports/ReaderWriter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/ReaderWriter.cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/assets/ClassDiagrams/ReaderWriter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/01-Introduction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/02-01-Date-and-Time-Handling.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/02-General-Introduction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/03-01-Cube-Functions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/03-02-Database-Functions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/CalculationEngine/FunctionReference/03-03-Date-and-Time-Functions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/01-Autofilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/02-Setting-an-Autofilter.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/03-Autofilter-Expressions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/04-01-Autofilter-Expressions-Simple.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/04-02-Autofilter-Expressions-Dategroup.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/04-03-Autofilter-Expressions-Custom.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/04-04-Autofilter-Expressions-Dynamic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/04-05-Autofilter-Expressions-Topten.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/05-Executing-Autofilters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/06-Autofilter-Sorting.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/01-01-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/01-02-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/01-03-filter-icon-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/01-03-filter-icon-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/01-04-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-01-simple-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-02-dategroup-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-03-custom-autofilter-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-03-custom-autofilter-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-04-dynamic-autofilter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-05-topten-autofilter-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Features/Autofilters/images/04-05-topten-autofilter-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Functions/FunctionListByCategory.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Functions/FunctionListByName.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/01-Getting-Started.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/02-Architecture.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/03-Creating-a-Spreadsheet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/04-Configuration-Settings.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/05-Deleting-a-Workbook.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/06-Worksheets.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/07-Accessing-Cells.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/08-Recipes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/09-Calculation-Engine.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/10-Reading-and-Writing.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/11-Appendices.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/01-schematic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/02-readers-writers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/07-simple-example-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/07-simple-example-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/07-simple-example-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/07-simple-example-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/08-cell-comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/08-column-width.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/08-page-setup-margins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/08-page-setup-scaling-options.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/08-styling-border-options.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/09-command-line-calculation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/09-formula-in-cell-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/Overview/images/09-formula-in-cell-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/01-File-Formats.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/02-Security.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/03-Loading-a-Spreadsheet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/04-Loading-with-a-Reader.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/05-Reader-Options.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/06-Error-Handling.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Documentation/markdown/ReadingSpreadsheetFiles/07-Helper-Methods.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01pharSimple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simple-download-ods.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simple-download-pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simple-download-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simple-download-xlsx.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/01simplePCLZip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/02types-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/02types.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/03formulas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/04printing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/05featuredemo.inc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/05featuredemo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/06largescale-with-cellcaching-sqlite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/06largescale-with-cellcaching-sqlite3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/06largescale-with-cellcaching.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/06largescale-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/06largescale.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/07reader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/07readerPCLZip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/08conditionalformatting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/08conditionalformatting2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/09pagebreaks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/10autofilter-selection-1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/10autofilter-selection-2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/10autofilter-selection-display.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/10autofilter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/11documentsecurity-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/11documentsecurity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/12cellProtection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/13calculation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/13calculationCyclicFormulae.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/14excel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/15datavalidation-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/15datavalidation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/16csv.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/17html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/18extendedcalculation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/19namedrange.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/20readexcel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/21pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/22heavilyformatted.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/23sharedstyles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/24readfilter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/25inmemoryimage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/26utf8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/27imagesexcel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/28iterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/29advancedvaluebinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/30template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/31docproperties_write-xls.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/31docproperties_write.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/32chartreadwrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-area.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-bar-stacked.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-bar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-column-2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-column.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-composite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-line.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-multiple-charts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-pie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-radar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-scatter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/33chartcreate-stock.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/34chartupdate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/35chartrender.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/36chartreadwriteHTML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/36chartreadwritePDF.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/37page_layout_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/38cloneWorksheet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/39dropdown.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/40duplicateStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/41password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/42richText.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/43mergeWorkbooks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/44worksheetInfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/Excel2003XMLReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/Excel2003XMLTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/GnumericReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/GnumericTest.gnumeric" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/OOCalcReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/OOCalcReaderPCLZip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/OOCalcTest.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/Quadratic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/Quadratic2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/SylkReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/SylkTest.slk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/XMLReader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/XMLTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/Africa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/Asia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/Europe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/North America.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/Oceania.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/data/continents/South America.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/images/paid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/images/phpexcel_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PHPExcel-1.8/Examples/runall.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modello/ModelUfedTools.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelUfedTools.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/HtmlTools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlTools.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +520,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1onlM6aroptAlMpuPTIET3EobE4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,6 +558,9 @@
       <workItem from="1613930187978" duration="1018000" />
       <workItem from="1615926965183" duration="251000" />
       <workItem from="1615927367781" duration="4568000" />
+      <workItem from="1616334510201" duration="1006000" />
+      <workItem from="1616348434571" duration="2851000" />
+      <workItem from="1616450251438" duration="3983000" />
     </task>
     <servers />
   </component>
@@ -62,5 +578,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sostituita classe per fogli xls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sostituita classe per fogli xls" />
   </component>
 </project>

@@ -893,7 +893,7 @@ class HtmlTools
         foreach($arrChat as $row)
         {
             $numMsg = $row[1];
-            breaK;
+            break;
         }
 
         $numMsg = preg_replace('/[A-Z]+/', '', $numMsg);
