@@ -75,5 +75,5 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 <h2>Donazioni</h2>
 <p>
   Se CFCM ti è stato utile e vuoi offrirmi un caffè puoi farlo seguendo l'url qui sotto: <br>
-  <a href="https://www.paypal.com/donate?hosted_button_id=7D5ZJXRNCYUJC" rel="nofollow" target="_blank">Donazione</a></li>
+  <a href="https://www.paypal.com/donate?hosted_button_id=7D5ZJXRNCYUJC" rel="nofollow" target="_blank">https://www.paypal.com/donate?hosted_button_id=7D5ZJXRNCYUJC</a></li>
 </p>
