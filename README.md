@@ -71,7 +71,7 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 
 <h2>Generazione di reports PDF</h2>
 <p>Per adesso CFCM non integra una libreria per la generazione di PDF ma si può sopperire a ciò utilizzando un software come <a href="https://www.pdfforge.org/pdfcreator">Pdf Creator</a> (consigliato) o similari.</p>
-<p>Altrimenti è disponibile la nuova versione nel branch "develop" in fase di sviluppo che integra la libreria <a href="https://github.com/mpdf/mpdf" target="_blank">MPDF tramite cui è stato possibile fare una stampa diretta del report su file pdf.</p>
+<p>Altrimenti è disponibile la nuova versione nel branch "develop" in fase di sviluppo che integra la libreria <a href="https://github.com/mpdf/mpdf" target="_blank">MPDF</a> tramite cui è stato possibile fare una stampa diretta del report su file pdf.</p>
 
 <h2>Donazioni</h2>
 <p>
