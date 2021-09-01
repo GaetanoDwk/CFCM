@@ -61,7 +61,7 @@ class MpdfIndagato
                     <tr>
                         <td id='cfcm'>Computer Forensics Case Manager</td>
                         <td id='titolo'>$titolo</td>
-                        <td id='logotd'><img id='logoimg' alt='logo' src='images/logo.png'></td>
+                        <td id='logotd'><img id='logoimg' alt='logo' src='images/logo.jpg'></td>
                     </tr>
                 </tbody>
             </table>

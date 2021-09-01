@@ -35,11 +35,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vista" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cfcm\images" />
       <recent name="C:\xampp\htdocs\cfcm\vista" />
       <recent name="C:\Users\gaetano\PhpstormProjects\cfcm" />
     </key>
@@ -58,7 +59,7 @@
       <workItem from="1616334510201" duration="1006000" />
       <workItem from="1616348434571" duration="2851000" />
       <workItem from="1616450251438" duration="3983000" />
-      <workItem from="1630501246049" duration="1390000" />
+      <workItem from="1630501246049" duration="2896000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -74,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630503010139</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="aggiunto mpdf">
+      <created>1630503920405</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630503920405</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
