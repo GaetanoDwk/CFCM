@@ -1,0 +1,171 @@
+/*private $StyleTdDetttaglio = "style='font-size: 8pt;'";
+private $StyleTdHash = "style='font-size: 8pt; text-align: left;'";
+private $StyleTdColTitle = "style='background: #003c78; color:white; font-family: Arial; font-size:9pt; text-align: center;'";
+private $StyleDescrizione = "style='font-family: Arial; font-size: 14pt; text-align: center;'";*/
+#cfcm {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 160px;
+}
+
+#titolo {
+  text-align: center;
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  width: 395px;
+}
+
+#logotd{
+  text-align: center;
+  width: 140px;
+}
+
+#logoimg{
+  width: 100px;
+}
+
+#note{
+  text-align: left;
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+}
+
+#foto1{
+  width: 250px;
+  text-align: center;
+}
+
+#foto2{
+  width: 250px;
+  position: relative;
+  left: 500px;
+  top: 0px;
+}
+
+#foto3{
+  width: 250px;
+  position: relative;
+  left: 200px;
+  top: 500px;
+}
+
+#foto4{
+  width: 250px;
+  position: relative;
+  left: 500px;
+  top: 500px;
+}
+
+#tdNote{
+  height: 70px;
+}
+
+body {
+  background: white;
+}
+
+p {
+  color: black;
+}
+
+.noborder {
+  border: none;
+}
+
+.textleft {
+  text-align: left;
+}
+
+.tabcol {
+  background: #003c78;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 9pt;
+  color: white;
+}
+
+.tabcolModello {
+  background: #003c78;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 9pt;
+  color: white;
+  width: 250px;
+}
+
+.hashGenerati {
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+  text-align: left;
+}
+.hashFotoLeft {
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  text-align: left;
+}
+
+.hashFotoCenter {
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  text-align: center;
+}
+
+.hashFotoRight {
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  text-align: right;
+}
+
+.foto {
+  width: 260px;
+}
+
+.descrizione{
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.tabcell {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 8pt;
+  color: black;
+}
+
+table {
+  width: 695px;
+  border: solid thin #333333;
+  border-collapse: collapse;
+
+}
+
+thead, b {
+  font-family: Arial, sans-serif;
+}
+
+
+td{
+  font-family: Arial, sans-serif;
+  border: solid thin #333333;
+  text-align: center;
+  padding: 7px;
+}
+
+tr{
+  font-family: Arial, sans-serif;
+  border: solid thin #333333;
+  text-align: center;
+  padding: 7px;
+}
+
+pre{
+  /*word-wrap: break-word;
+  white-space: pre-line;
+  width: 680px;*/
+  font-size: 8pt;
+}
