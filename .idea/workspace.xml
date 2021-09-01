@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="Update readme">
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="aggiunto mpdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modello/ModelCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelCaso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/ControllerIndagato.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerIndagato.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/MpdfIndagato.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/MpdfIndagato.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +35,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../xampp/htdocs/cfcm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vista" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cfcm\vista" />
       <recent name="C:\Users\gaetano\PhpstormProjects\cfcm" />
     </key>
   </component>
@@ -57,7 +58,23 @@
       <workItem from="1616334510201" duration="1006000" />
       <workItem from="1616348434571" duration="2851000" />
       <workItem from="1616450251438" duration="3983000" />
+      <workItem from="1630501246049" duration="1390000" />
     </task>
+    <task id="LOCAL-00001" summary="aggiunto mpdf">
+      <created>1630501505606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630501505607</updated>
+    </task>
+    <task id="LOCAL-00002" summary="aggiunto mpdf">
+      <created>1630503010139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630503010139</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sostituita classe per fogli xls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sostituita classe per fogli xls" />
+    <MESSAGE value="aggiunto mpdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto mpdf" />
   </component>
 </project>
