@@ -4,9 +4,6 @@ mysql -u root cfcm -e "TRUNCATE TABLE tools";
 REM decrementa di 1 i giorni mancanti alla scadenza del caso
 mysql -u root cfcm -e "UPDATE CASO SET caso.ca_ggres = DATEDIFF(ca_datadel, DATE(NOW()))-1";
 
-REM decrementa di 1 i giorni mancanti alla scadenza della lavorazione
-mysql -u root cfcm -e "UPDATE lavorazione SET ggrestanti = DATEDIFF(dfine, NOW()) WHERE ggrestanti > 0";
-
 REM setta il nome del file zip inserendo anche un timestamp
 set NAME=CFCM-%DATE:/=-%@%TIME::=-%.7z
 

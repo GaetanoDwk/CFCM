@@ -329,4 +329,14 @@ class ModelClone
         $sql->execute();
     }
 
+    public function get_log_file($logpath)
+    {
+        $log = 0;
+        if(($logpath != null) && ($logpath != "")){
+            @$log = file_get_contents($logpath);
+        }
+        return $log;
+
+    }
+
 }

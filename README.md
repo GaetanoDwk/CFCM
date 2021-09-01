@@ -1,18 +1,17 @@
 # CFCM
-<img src=/images/logo.png height='200px'>
+<img src=/images/logo.png height='200px' alt='logo'>
 Computer Forensics Case Manager<br>
 
 <p>CFCM è un gestionale open-source web based pensato per piccole aziende o singoli professionisti nel settore della Digital Forensics. Permette di gestire agevolmente le informazioni relative agli artefatti informatici ed infine generare una reportistica in pdf.
 Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecnico forense utilizza spesso; come ad esempio Ftk Toolkit e Cellebrite Ufed Reader.</p>
 <h2>Pre-Requisiti</h2>
-<p>L'installazione del gestionale richiede la presenza dell'ambiente di sviluppo per PHP denominato <a href="https://www.apachefriends.org/index.html" rel="nofollow">Xampp (3.2.4 o superiore)</a><br>
-  Quest'ultimo integra già al suo interno tutto l'occorrente, ovvero:
+<p>L'installazione del gestionale richiede la presenza dell'ambiente di sviluppo per PHP denominato <a href="https://www.apachefriends.org/download.html" rel="nofollow">Xampp (3.2.4 o superiore)</a><br>
+  Quest'ultimo integra già al suo interno tutto l'occorrente, ovvero:</p>
   <ul>
-    <li><a href="https://httpd.apache.org/" rel="nofollow">Web Server Apache (>= 2.4.41)</a></li>
-    <li><a href="http://php.net" rel="nofollow">Interprete PHP (>= 5.6)</a></li>
-    <li><a href="https://www.mysql.com" rel="nofollow">Database MySQL (>= 5.6.5)</a></li>
+    <li>Web Server Apache 2.4.46</li>
+    <li>Interprete PHP 8</li>
+    <li>Database MySQL 8 / MariaDb 10.4</li>
   </ul>
-</p>
 <p>Inoltre, nonostante Xampp integri già <a href="https://www.phpmyadmin.net/" rel="nofollow">PhpMyAdmin</a> che permette di gestire MySQL da pannello web, è utile installare un software per la gestione del database come i seguenti:</p>
 <ul>
   <li><a href="https://www.mysql.com/products/workbench/" rel="nofollow">MySQL Workbench</a>
@@ -46,7 +45,7 @@ Per procedere all'installazione è necessario seguire i seguenti punti:
 <p>Sempre utilizzando Navicat, HeidiSQL o Workbench esegui lo script cfcm.sql presente nel pacchetto della release per fare il restore nel db vuoto che avete appena creato</p>
 </li>
 <li>
-<p>Con un editor di testo aprire il file DBManager.php presente in /Modello/ ed editare la linea <code>self::$db = new PDO( 'mysql:host=localhost;dbname=cfcm', 'root', '' );</code> aggiungendo la propria username e password per collegarsi al server MySQL</p>
+<p>Con un editor di testo aprire il file DBManager.php presente in /Modello/ ed editare la linea <code>self::$db = new PDO( 'mysql:host=localhost;dbname=cfcm', 'NOME-UTENTE', 'PASSWORD' );</code> aggiungendo la propria username e password per collegarsi al server MySQL</p>
 </li>
 <li>
   <p>Aprire il browser e collegarsi a <code>http://127.0.0.1/cfcm/</code> e loggarsi con <code>username: admin</code> e <code>password: admin</code></p>
@@ -56,6 +55,7 @@ Per procedere all'installazione è necessario seguire i seguenti punti:
 <h2>Configurazione</h2>
 Infine vi sono alcune configurazioni da effettuare tra cui:
 <ol>
+<li>Aprire il file php.ini e abilitare l'estensione gd togliendo il punto e virgola alla stringa ;extension=gd per decommentarla</li>
 <li>
     <p>Accedere al gestionale e recarsi nella sezione "Amministrazione/Azienda" ed aggiungere una nuova azienda per inserire le 
       informazioni che verrano successivamente stampate nel footer della copertina dei Report pdf.</p>
@@ -70,11 +70,11 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 </ol>
 
 <h2>Generazione di reports PDF</h2>
-<p>Per adesso CFCM non integra una libreria per la generazione di PDF ma si può sopperire a ciò utilizzando un software come <a href="https://www.pdfforge.org/pdfcreator">Pdf Creator</a> (consigliato) o similari.</p>
-<p>Altrimenti è disponibile la nuova versione nel branch "develop" in fase di sviluppo che integra la libreria <a href="https://github.com/mpdf/mpdf" target="_blank">MPDF</a> tramite cui è stato possibile fare una stampa diretta del report su file pdf.</p>
+<p>In questo branch "develop" è in corso l'integrazione della libreria mpdf per la generazione di pdf direttamente da CFCM senza l'appoggio di applicazioni di terze parti come PdfCreator</p>
 
 <h2>Donazioni</h2>
 <p>
-  Se CFCM ti è stato utile e vuoi offrirmi un caffè puoi farlo seguendo il link qui sotto: <br>
-  <a href="https://www.paypal.com/donate?hosted_button_id=7D5ZJXRNCYUJC" rel="nofollow">Donazione PayPal</a></li>
+  Se CFCM ti è stato utile e vuoi offrirmi un caffè puoi farlo seguendo il link qui sotto: <br> 
+  <a href="https://www.paypal.com/donate?hosted_button_id=7D5ZJXRNCYUJC" target="_blank">Donazione PayPal</a>
 </p>
+

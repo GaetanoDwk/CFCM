@@ -227,8 +227,13 @@ class ModelAzienda {
         $conn = DbManager::getConnection();
 
         //_____________________________
-        // prepara la query, la esegue
-        $sql = $conn->prepare("SELECT * FROM azienda WHERE id = '$id'");
+        // PREPARE SQL
+        $sql = $conn->prepare("SELECT * FROM azienda WHERE id = :id");
+
+        // BINDING PARAMETERS
+        $sql->bindParam(':id', $id);
+
+        // EXECUTE SQL
         $sql->execute();
 
         while ($row = $sql->fetch()) {
@@ -338,7 +343,23 @@ class ModelAzienda {
 
         //_____________________________
         // prepara la query, la esegue
-        $sql = $conn->prepare("INSERT INTO azienda (rsoc, ctu, indi, cap, citta, tele, cell, fax, mail, piva, rea, def) VALUES (\"$rsoc\", \"$ctu\", \"$indi\", \"$cap\", \"$citta\", \"$tele\", \"$cell\", \"$fax\", \"$mail\", \"$piva\", \"$rea\", \"$def\")");
+        $sql = $conn->prepare("INSERT INTO azienda (rsoc, ctu, indi, cap, citta, tele, cell, fax, mail, piva, rea, def) VALUES (:rsoc, :ctu, :indi, :cap, :citta, :tele, :cell, :fax, :mail, :piva, :rea, :def)");
+
+        // BIND PARAMETERS
+        $sql->bindParam(':rsoc', $rsoc, PDO::PARAM_STR);
+        $sql->bindParam(':ctu', $ctu, PDO::PARAM_STR);
+        $sql->bindParam(':indi', $indi, PDO::PARAM_STR);
+        $sql->bindParam(':cap', $cap, PDO::PARAM_STR);
+        $sql->bindParam(':citta', $citta, PDO::PARAM_STR);
+        $sql->bindParam(':tele', $tele, PDO::PARAM_STR);
+        $sql->bindParam(':cell', $cell, PDO::PARAM_STR);
+        $sql->bindParam(':fax', $fax, PDO::PARAM_STR);
+        $sql->bindParam(':mail', $mail, PDO::PARAM_STR);
+        $sql->bindParam(':piva', $piva, PDO::PARAM_STR);
+        $sql->bindParam(':rea', $rea, PDO::PARAM_STR);
+        $sql->bindParam(':def', $def, PDO::PARAM_INT);
+
+        // EXECUTE SQL
         $sql->execute();
     }
 
@@ -359,7 +380,24 @@ class ModelAzienda {
     public function update_azienda($id, $rsoc, $ctu, $indi, $cap, $citta, $tele, $cell, $fax, $mail, $piva, $rea, $def)
     {
         $conn = DbManager::getConnection();
-        $sql = $conn->prepare("UPDATE azienda SET rsoc = \"$rsoc\", ctu = \"$ctu\", indi = \"$indi\", cap = \"$cap\", citta = \"$citta\", tele = \"$tele\", cell = \"$cell\", fax = \"$fax\", mail = \"$mail\", piva = \"$piva\", rea = \"$rea\", def = \"$def\"  WHERE id = $id");
+        $sql = $conn->prepare("UPDATE azienda SET rsoc = :rsoc, ctu = :ctu, indi = :indi, cap = :cap, citta = :citta, tele = :tele, cell = :cell, fax = :fax, mail = :mail, piva = :piva, rea = :rea, def = :def  WHERE id = :id");
+
+        //BIND PARAMETERS
+        $sql->bindParam(':id', $id, PDO::PARAM_INT);
+        $sql->bindParam(':rsoc', $rsoc, PDO::PARAM_STR);
+        $sql->bindParam(':ctu', $ctu, PDO::PARAM_STR);
+        $sql->bindParam(':indi', $indi, PDO::PARAM_STR);
+        $sql->bindParam(':cap', $cap, PDO::PARAM_STR);
+        $sql->bindParam(':citta', $citta, PDO::PARAM_STR);
+        $sql->bindParam(':tele', $tele, PDO::PARAM_STR);
+        $sql->bindParam(':cell', $cell, PDO::PARAM_STR);
+        $sql->bindParam(':fax', $fax, PDO::PARAM_STR);
+        $sql->bindParam(':mail', $mail, PDO::PARAM_STR);
+        $sql->bindParam(':piva', $piva, PDO::PARAM_STR);
+        $sql->bindParam(':rea', $rea, PDO::PARAM_STR);
+        $sql->bindParam(':def', $def, PDO::PARAM_INT);
+
+        // EXECUTE SQL
         $sql->execute();
     }
 
@@ -374,7 +412,12 @@ class ModelAzienda {
 
         //_____________________________
         // prepara il delete e lo esegue
-        $sql = $conn->prepare("DELETE from azienda WHERE id =". $id);
+        $sql = $conn->prepare("DELETE from azienda WHERE id = :id");
+
+        // BIND PARAMETERS
+        $sql->bindParam(':id', $id, PDO::PARAM_INT);
+
+        // EXECUTE SQL
         $sql->execute();
     }
 

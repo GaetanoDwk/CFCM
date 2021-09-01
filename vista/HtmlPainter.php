@@ -11,18 +11,24 @@ class HtmlPainter
      * Stampa i tag per creare una nuova pagina. In questo modo quando si stampa la reportistica è possibile suddividere
      * i dati in pagine a seconda delle esigenze
      */
-    public function HTML_newpage(){echo"<div style='page-break-before: always;'>";}
+    public function HTML_newpage(){
+        echo "<div style='page-break-before: always;'>";
+    }
 
     /**
      * Stampa il tag di chiusura della pagina aperta dalla funzione Html_newpage()
      */
-    public function HTML_close_newpage(){echo "</div>";}
+    public function HTML_close_newpage(){
+        echo "</div>";
+    }
 
 
     /**
      * Stampa il tag di andata a capo <br>
      */
-    public function HTML_br(){echo"<br>";}
+    public function HTML_br(){
+        echo "<br>";
+    }
 
 
 
@@ -50,7 +56,7 @@ class HtmlPainter
 
                     <meta charset=\"utf-8\">
 
-                    <title>Computer Forensic Case Manager</title>
+                    <title>Computer Forensics Case Manager</title>
 
                     <meta name=\"description\" content=\"\">
 
@@ -197,10 +203,9 @@ class HtmlPainter
         echo"<div class=\"container\">
                 <!-- Griglia -->
                 <div class=\"docs-section\" id=\"grid\">
-                    <h6 class=\"docs-header\">COMPUTER FORENSIC CASE MANAGER</h6>
                         <div class='row'>
                             <div class='twelve column'>
-                                <center><img src='images/logo.png' width='30%'></center>
+                                <center><img src='images/logo.png' width='55%'></center>
                             </div>
                         </div>
                         <br>
@@ -235,10 +240,9 @@ class HtmlPainter
                 <b style='color: red;'>Username o Password errati. Ritenta!</b>
                 <!-- Griglia -->
                 <div class=\"docs-section\" id=\"grid\">
-                    <h6 class=\"docs-header\">Computer Forensic Case Manager</h6>
                         <div class='row'>
                             <div class='twelve column'>
-                                <center><img src='images/logo.png' width='30%'></center>
+                                <center><img src='images/logo.png' width='55%'></center>
                             </div>
                         </div>
                         <br>

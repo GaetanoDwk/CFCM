@@ -7,6 +7,8 @@
  */
 class HtmlIndagato
 {
+    private $StyleTdDetttaglio = "align='center' style='font-size: 8pt;'";
+    private $StyleTdColTitle = "align='center' style='background: #003c78; color:white; font-family: Arial; font-size:9pt;'";
     /**
      * Visualizza la pagina contenente tutti gli indagati di un determinato caso
      * @param $Indagati
@@ -71,7 +73,8 @@ class HtmlIndagato
                             <td>
                                 <form action='index.php' method='post' target='_blank'>
                                 <input type='hidden' id='ind_id' name='ind_id'  value=" . $row['ind_id'] .">
-                                <button type='submit' name='comando' value='report_indagato' title='Genera Report' style='border:none; padding:0px 0px;'><i class=\"fa fa-file-pdf-o fa-3x\" aria-hidden=\"true\"></i></button>
+                                <button type='submit' name='comando' value='report_indagato' title='Stampa a video' style='border:none; padding:0px 0px; color: red;'><i class=\"fa fa-file-pdf-o fa-3x\" aria-hidden=\"true\"></i></button>
+                                <button type='submit' name='comando' value='report_indagato_mpdf' title='Genera e Scarica PDF' style='border:none; padding:0px 0px; color: green;'><i class=\"fa fa-file-pdf-o fa-3x\" aria-hidden=\"true\"></i></button>
                                 </form>
                             </td>
                             <form action='index.php'  method='post'>
@@ -199,11 +202,7 @@ class HtmlIndagato
     }
 
 
-    /**
-     * Visualizza l'intestazione del REPORT di supporto alla creazione del DOCX di un determinato indagato
-     * @param $ind_cognome
-     * @param $ind_nome
-     */
+
     public function HTML_REPORT_header($ind_cognome, $ind_nome){
         echo"<html>
             <head>
@@ -232,19 +231,16 @@ class HtmlIndagato
     }
 
 
-    /**
-     * Visualizza l'intestazione della pagina del REPORT PDF di un indagato
-     * @param $titolo
-     */
+
     public function HTML_REPORT_page_header($titolo)
     {
         echo"
-        <table border='1' cellpadding='7px'>
+        <table border='1' cellpadding='5px'>
                 <tbody>
                     <tr>
-                        <td width='160px'>Computer Forensic Case Manager</td>
-                        <td width='395px'><center><b style='font-size: 14pt'>$titolo</b></center></td>
-                        <td width='140px'><img src='images/logo.png' width='95px' align='left'></td>
+                        <td style='width: 160px;'>Computer Forensic Case Manager</td>
+                        <td style='width: 395px;'><center><b style='font-size: 14pt'>$titolo</b></center></td>
+                        <td style='width: 140px;'><img src='images/logo.png' width='95px' align='left'></td>
                     </tr>
                 </tbody>
             </table>
@@ -252,25 +248,10 @@ class HtmlIndagato
     }
 
 
-    /**
-     * Visualizza le informazioni di prima pagina del report di un indagato
-     * @param $ca_num
-     * @param $ca_tipo
-     * @param $ind_titolo
-     * @param $ind_cognome
-     * @param $ind_nome
-     * @param $cli_nome
-     * @param $cli_citta
-     * @param $pm_titolo
-     * @param $pm_cognome
-     * @param $pm_nome
-     * @param $ctu
-     */
     public function HTML_REPORT_info($ca_num, $ca_tipo, $ind_titolo, $ind_cognome, $ind_nome, $cli_nome, $cli_citta, $pm_titolo, $pm_cognome, $pm_nome, $ctu)
     {
         echo"
         <table border='1' cellpadding='7px'>
-
             <tbody>
                 <tr>
                     <td><strong>Numero del Caso:</strong><br>$ca_num</td>
@@ -279,15 +260,15 @@ class HtmlIndagato
                 <tr>
                     <td><strong>Cliente</strong><br>$cli_nome</td>
                     <td colspan='2'><strong>Contatto Cliente</strong><br>";
-                        if($_SESSION['cli_type'] == 'P'){echo"PM $pm_titolo $pm_cognome $pm_nome";}else{echo"$pm_titolo $pm_cognome $pm_nome";}
-        echo"       </td>
+        if($_SESSION['cli_type'] == 'P'){echo"PM $pm_titolo $pm_cognome $pm_nome";}else{echo"$pm_titolo $pm_cognome $pm_nome";}
+        "</td>
                 </tr>
                 <tr>
                     <td><strong>Luogo</strong><br>$cli_citta</td>";
-                    if($_SESSION['cli_type']=='P'){echo"<td><strong>C.T.U.</strong><br>$ctu</td>";};
-                    if($_SESSION['cli_type']=='T'){echo"<td><strong>Perito</strong><br>$ctu</td>";};
-                    if($_SESSION['cli_type']=='C'){echo"<td><strong>C.T.P.</strong><br>$ctu</td>";};
-                    echo"<td><strong>Tipo di Investigazione</strong><br>$ca_tipo</td>
+        if($_SESSION['cli_type']=='P'){echo"<td><strong>C.T.U.</strong><br>$ctu</td>";};
+        if($_SESSION['cli_type']=='T'){echo"<td><strong>Perito</strong><br>$ctu</td>";};
+        if($_SESSION['cli_type']=='C'){echo"<td><strong>C.T.P.</strong><br>$ctu</td>";};
+        echo"<td><strong>Tipo di Investigazione</strong><br>$ca_tipo</td>
                 </tr>
             </tbody>
         </table>
@@ -419,6 +400,8 @@ echo"
     }
 
 
+
+
     /**
      * Visualizza le descrizioni dei media (evidence), in tabella, appartenenti all'indagato di cui si sta generando il report.
      * @param $arr
@@ -444,11 +427,11 @@ echo"
                 foreach($arr as $row){
                     if($IdEvi != $row['evi_id']) {
                         echo "<tr style='font-size: 8pt;'>
-                                <td align='center'>" . $row['ho_etichetta'] . "</td>
-                                <td align='center'>" . $row['evi_etichetta'] . "</td>
-                                <td align='center'>" . $row['evi_modello'] . "</td>
-                                <td align='center'>" . $row['evi_dimensione'] . " " . $row['evi_kbmbgbtb'] . "</td>
-                                <td align='center'>" . $row['evi_seriale'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_etichetta'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['evi_etichetta'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['evi_modello'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['evi_dimensione'] . " " . $row['evi_kbmbgbtb'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['evi_seriale'] . "</td>
                      </tr>";
                         $IdEvi = $row['evi_id'];
                     }
@@ -459,11 +442,11 @@ echo"
                         if ($row['ho_id'] != $ho_spec_id) {
                             echo "
                             <tr style='font-size: 8pt;'>
-                                <td align='center'>" . $row['ho_etichetta'] . "</td>
-                                <td align='center'>" . $row['ho_etichetta'] . "</td>
-                                <td align='center'>" . $row['ho_modello'] . "</td>
-                                <td align='center'>" . $row['ho_dimensione'] . " " . $row['ho_kbmbgbtb'] . "</td>
-                                <td align='center'>" . $row['ho_seriale'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_etichetta'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_etichetta'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_modello'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_dimensione'] . " " . $row['ho_kbmbgbtb'] . "</td>
+                                <td $this->StyleTdDetttaglio>" . $row['ho_seriale'] . "</td>
                             </tr>
                             ";
                             $ho_spec_id = $row['ho_id'];
@@ -474,6 +457,7 @@ echo"
     </tbody>
 </table>";
     }
+
 
 
     /**
@@ -540,6 +524,7 @@ echo"
             </tbody>
             </table><br>";
     }
+
 
 
     /**
@@ -619,6 +604,12 @@ echo"
     }
 
 
+
+
+
+
+
+
     /**
      * Visualizza le foto di un host.
      * @param $ho_pathfoto
@@ -649,10 +640,9 @@ echo"
                         if($md5_image4 != null){echo"<td align='center'><img src='$ho_pathfoto$ho_image4' width='250px'><br><br>MD5: " . $md5_image4 . "</td>";}
                     echo"</tr>";
                   echo"</tbody>
-            </table>
-            </tbody>
             </table>";
     }
+
 
 
     /**

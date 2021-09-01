@@ -5,23 +5,24 @@
  * Dopo tali inclusioni vi è uno switch-case che permette di redirezionare il flusso di esecuzione dell'applicativo.
  * */
 require_once "modello/DbManager.php";
+require_once __DIR__ . '/lib/vendor/autoload.php';
 
 require_once("controllo/Controllo.php");
 require_once("controllo/ControllerAzienda.php");
 require_once("controllo/ControllerUtente.php");
 require_once("controllo/ControllerCliente.php");
 require_once("controllo/ControllerPm.php");
-require_once("controllo/ControllerCaso.php");
-require_once("controllo/ControllerIndagato.php");
-require_once("controllo/ControllerHost.php");
-require_once("controllo/ControllerHostSpecial.php");
-require_once("controllo/ControllerEvidence.php");
-require_once("controllo/ControllerClone.php");
-require_once("controllo/ControllerCloneSpecial.php");
-require_once("controllo/ControllerLavorazione.php");
-require_once("controllo/ControllerMagazzino.php");
-require_once("controllo/ControllerTools.php");
-require_once("controllo/ControllerDocx.php");
+require_once("Controllo/ControllerCaso.php");
+require_once("Controllo/ControllerIndagato.php");
+require_once("Controllo/ControllerHost.php");
+require_once("Controllo/ControllerHostSpecial.php");
+require_once("Controllo/ControllerEvidence.php");
+require_once("Controllo/ControllerClone.php");
+require_once("Controllo/ControllerCloneSpecial.php");
+require_once("Controllo/ControllerLavorazione.php");
+require_once("Controllo/ControllerMagazzino.php");
+require_once("Controllo/ControllerTools.php");
+require_once("Controllo/ControllerDocx.php");
 
 require_once("modello/ModelAzienda.php");
 require_once("modello/ModelProcura.php");
@@ -58,7 +59,7 @@ require_once("vista/HtmlHost.php");
 require_once("vista/HtmlEvidence.php");
 require_once("vista/HtmlTools.php");
 require_once("vista/HtmlUtente.php");
-//require_once("modello/smart_resize_image.php");
+require_once("vista/MpdfIndagato.php");
 
 
 $controller = "default";
@@ -394,6 +395,9 @@ else{
             break;
         // Reportistica PDF INDAGATO
         case "report_indagato":
+            $ControllerIndagato->invoke($comando);
+            break;
+        case "report_indagato_mpdf":
             $ControllerIndagato->invoke($comando);
             break;
 

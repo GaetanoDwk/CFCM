@@ -165,10 +165,11 @@ class ModelCaso {
      */
     public function count_scadenze(){
         $conn = DbManager::getConnection();
-        $sql = $conn->prepare("SELECT ca_id FROM caso
+        $sql = $conn->prepare("SELECT ca_id FROM CASO
                                LEFT OUTER JOIN pm ON pm.pm_id = caso.ex_id_pm
                                LEFT OUTER JOIN cliente ON cliente.cli_id = pm.ex_id_cli
                                WHERE ca_ggres <=30 AND cli_citta = 'Napoli'");
+        // EXECUTE SQL
         $sql->execute();
         $num = $sql->rowCount();
         return $num;

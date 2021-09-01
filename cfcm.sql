@@ -3,15 +3,15 @@
 
  Source Server         : local
  Source Server Type    : MySQL
- Source Server Version : 100417
+ Source Server Version : 100418
  Source Host           : localhost:3306
  Source Schema         : cfcm
 
  Target Server Type    : MySQL
- Target Server Version : 100417
+ Target Server Version : 100418
  File Encoding         : 65001
 
- Date: 21/02/2021 17:37:45
+ Date: 08/04/2021 01:14:40
 */
 
 SET NAMES utf8mb4;
@@ -36,7 +36,7 @@ CREATE TABLE `azienda`  (
   `rea` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `def` tinyint(4) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for caso
@@ -56,7 +56,7 @@ CREATE TABLE `caso`  (
   INDEX `vincolo_id_pm`(`ex_id_pm`) USING BTREE,
   INDEX `ca_id`(`ca_id`) USING BTREE,
   CONSTRAINT `caso_ibfk_1` FOREIGN KEY (`ex_id_pm`) REFERENCES `pm` (`pm_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 221 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 255 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for cliente
@@ -70,7 +70,7 @@ CREATE TABLE `cliente`  (
   `is_procura` tinyint(4) NULL DEFAULT 0,
   `is_tribunale` tinyint(4) NULL DEFAULT 0,
   PRIMARY KEY (`cli_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 46 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for clone
@@ -90,7 +90,7 @@ CREATE TABLE `clone`  (
   PRIMARY KEY (`clo_id`) USING BTREE,
   INDEX `f_id_evi`(`ex_id_evi`) USING BTREE,
   CONSTRAINT `clone_ibfk_1` FOREIGN KEY (`ex_id_evi`) REFERENCES `evidence` (`evi_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 2280 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2768 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for evidence
@@ -115,7 +115,7 @@ CREATE TABLE `evidence`  (
   PRIMARY KEY (`evi_id`) USING BTREE,
   INDEX `Vincolo Id Host`(`ex_id_host`) USING BTREE,
   CONSTRAINT `evidence_ibfk_1` FOREIGN KEY (`ex_id_host`) REFERENCES `host` (`ho_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 1649 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1876 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for ftktool_mail
@@ -160,7 +160,7 @@ CREATE TABLE `host`  (
   INDEX `f_id_caso`(`ex_id_caso`) USING BTREE,
   INDEX `vincolo_id_indag`(`ex_id_indagato`) USING BTREE,
   CONSTRAINT `host_ibfk_1` FOREIGN KEY (`ex_id_indagato`) REFERENCES `indagato` (`ind_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 1112 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1277 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for host_special
@@ -187,7 +187,7 @@ CREATE TABLE `host_special`  (
   INDEX `f_id_caso`(`ex_id_caso`) USING BTREE,
   INDEX `vincolo_id_indag`(`ex_id_indagato`) USING BTREE,
   CONSTRAINT `host_special_ibfk_1` FOREIGN KEY (`ex_id_indagato`) REFERENCES `indagato` (`ind_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 586 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 777 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for indagato
@@ -202,7 +202,7 @@ CREATE TABLE `indagato`  (
   PRIMARY KEY (`ind_id`) USING BTREE,
   INDEX `vincolo_id_caso`(`ex_id_caso`) USING BTREE,
   CONSTRAINT `indagato_ibfk_1` FOREIGN KEY (`ex_id_caso`) REFERENCES `caso` (`ca_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 458 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 547 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for lavorazione
@@ -231,7 +231,7 @@ CREATE TABLE `lavorazione`  (
   `operatore` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `last_upd_ggrestanti` date NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 199 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 221 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for magazzino
@@ -246,7 +246,7 @@ CREATE TABLE `magazzino`  (
   `dataC` date NOT NULL,
   `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for pm
@@ -261,7 +261,7 @@ CREATE TABLE `pm`  (
   PRIMARY KEY (`pm_id`) USING BTREE,
   INDEX `id_pro`(`ex_id_cli`) USING BTREE,
   CONSTRAINT `pm_ibfk_1` FOREIGN KEY (`ex_id_cli`) REFERENCES `cliente` (`cli_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 124 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 129 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tipo_acquisizione
@@ -340,7 +340,7 @@ CREATE TABLE `tipo_host_special`  (
   `hos_default` tinyint(4) NOT NULL DEFAULT 0,
   `hos_icon` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`hos_tipo_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tipo_host_special
@@ -357,6 +357,7 @@ INSERT INTO `tipo_host_special` VALUES (12, 'SolidStateDrive', 0, NULL);
 INSERT INTO `tipo_host_special` VALUES (13, 'Altro', 0, NULL);
 INSERT INTO `tipo_host_special` VALUES (14, 'LOG', 0, NULL);
 INSERT INTO `tipo_host_special` VALUES (15, 'SSD Esterno', 0, 'font/icon/SSDEsterno.png');
+INSERT INTO `tipo_host_special` VALUES (16, 'Cloud', 0, 'font/icon/Cloud.png');
 
 -- ----------------------------
 -- Table structure for tools
@@ -368,7 +369,7 @@ CREATE TABLE `tools`  (
   `path` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
   `md5` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 347 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for utenti
@@ -394,10 +395,10 @@ INSERT INTO `utenti` VALUES (5, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Ad
 -- ----------------------------
 DROP TRIGGER IF EXISTS `CalcoloScadenza`;
 delimiter ;;
-CREATE TRIGGER `CalcoloScadenza` BEFORE INSERT ON `caso` FOR EACH ROW BEGIN 
-SET NEW.ca_datadel = DATE_ADD(DATE(NOW()), INTERVAL 365 DAY);
-SET NEW.ca_datains = DATE(NOW());
-SET NEW.ca_ggres = DATEDIFF(NEW.ca_datadel, NEW.ca_datains)-1;
+CREATE TRIGGER `CalcoloScadenza` BEFORE INSERT ON `caso` FOR EACH ROW BEGIN 
+SET NEW.ca_datadel = DATE_ADD(DATE(NOW()), INTERVAL 365 DAY);
+SET NEW.ca_datains = DATE(NOW());
+SET NEW.ca_ggres = DATEDIFF(NEW.ca_datadel, NEW.ca_datains)-1;
 END
 ;;
 delimiter ;

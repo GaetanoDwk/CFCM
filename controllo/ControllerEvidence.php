@@ -183,7 +183,7 @@ class ControllerEvidence
         $Tipo = $_POST['evi_tipo'];
         if(empty($_POST['evi_modello'])){$Modello = 'N.D.';} else{$Modello = $_POST['evi_modello'];}
         if(empty($_POST['evi_seriale'])){$Seriale = 'N.D.';} else{$Seriale = $_POST['evi_seriale'];}
-        if(empty($_POST['evi_pwd'])){$Pwd = 'N.D.';} else{$Pwd = $_POST['evi_pwd'];}
+        if(empty($_POST['evi_pwd'])){$Pwd = null;} else{$Pwd = $_POST['evi_pwd'];}
         if(isset($_POST['evi_pwd_used'])){$Pwd_used = $_POST['evi_pwd_used'];} else {$Pwd_used = 0;}
         $Dimensione = $_POST['evi_dimensione'];
         $kbmbgbtb = $_POST['evi_kbmbgbtb'];
@@ -306,7 +306,7 @@ class ControllerEvidence
         $modello = $_POST['evi_modello'];
         $seriale = $_POST['evi_seriale'];
         // Se il campo password non è stato riempito mette N.D. in $pwd altrimenti prende il valore della post['ho_pwd]
-        if(empty($_POST['evi_pwd'])){$pwd = 'N.D.';} else{$pwd = $_POST['evi_pwd'];}
+        if(empty($_POST['evi_pwd'])){$pwd = null;} else{$pwd = $_POST['evi_pwd'];}
         // Controllo del check-box pwd_used
         if(isset($_POST['evi_pwd_used'])){$pwd_used = $_POST['evi_pwd_used'];} else{$pwd_used = 0;}
         $dimensione = $_POST['evi_dimensione'];
