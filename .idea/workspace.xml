@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="readme">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CFCM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CFCM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modello/ModelCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelCaso.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/lib/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -22,6 +26,16 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/lib/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/lib/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/lib/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/lib/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/lib/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/lib/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1onlM6aroptAlMpuPTIET3EobE4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -57,7 +71,8 @@
       <workItem from="1616334510201" duration="1006000" />
       <workItem from="1616348434571" duration="2851000" />
       <workItem from="1616450251438" duration="3983000" />
-      <workItem from="1630501246049" duration="3214000" />
+      <workItem from="1630501246049" duration="3838000" />
+      <workItem from="1630506653326" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -101,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630505513255</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme">
+      <created>1630505600484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630505600484</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
