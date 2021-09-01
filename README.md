@@ -70,7 +70,7 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 </ol>
 
 <h2>Generazione di reports PDF</h2>
-<p>In questo branch "develop" è in corso l'integrazione della libreria mpdf per la generazione di pdf direttamente da CFCM senza l'appoggio di applicazioni di terze parti come PdfCreator</p>
+<p>E' in corso l'integrazione della libreria mpdf per la generazione di pdf direttamente da CFCM senza l'appoggio di applicazioni di terze parti come PdfCreator</p>
 
 <h2>Donazioni</h2>
 <p>
