@@ -17,6 +17,7 @@ Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecn
   <li><a href="https://www.mysql.com/products/workbench/" rel="nofollow">MySQL Workbench</a>
   <li><a href="https://www.heidisql.com/" rel="nofollow">HeidiSQL</a></li>
   <li><a href="https://navicat.com/en/products/navicat-for-mysql" rel="nofollow">Navicat for MySQL</a> (consigliato)</li>
+  <li><a href="https://dbeaver.io/" rel="nofollow">DBeaver</a> (consigliato)</li>
 </ul>
 
 <h2>Installazione</h2>

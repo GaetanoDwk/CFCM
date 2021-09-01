@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="cambiato logo">
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="readme">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +57,7 @@
       <workItem from="1616334510201" duration="1006000" />
       <workItem from="1616348434571" duration="2851000" />
       <workItem from="1616450251438" duration="3983000" />
-      <workItem from="1630501246049" duration="3128000" />
+      <workItem from="1630501246049" duration="3214000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630505367183</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="readme">
+      <created>1630505513255</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630505513255</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +123,7 @@
     <MESSAGE value="Sostituita classe per fogli xls" />
     <MESSAGE value="aggiunto mpdf" />
     <MESSAGE value="cambiato logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiato logo" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
 </project>
