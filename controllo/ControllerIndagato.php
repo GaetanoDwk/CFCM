@@ -502,8 +502,8 @@ class ControllerIndagato
             ob_clean();
             //echo $html;
             $mpdf->WriteHTML($html);
-            $mpdf->Output();
-            //$mpdf->Output($ind_cognome . " " . $ind_nome . '.pdf', 'D');
+            //$mpdf->Output();
+            $mpdf->Output($ind_cognome . " " . $ind_nome . '.pdf', 'D');
         }
         catch (Exception $e)
         {
