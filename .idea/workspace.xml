@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="readme">
-      <change beforePath="$PROJECT_DIR$/.idea/CFCM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CFCM.iml" afterDir="false" />
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/font/icon/cloud.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modello/ModelCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelCaso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfcm.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cfcm.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/FloppyDisk.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/floppydisk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/HardDisk.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/harddisk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/HardDiskEsterno.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/harddiskesterno.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/LettoreMP3.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/lettoremp3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/MemoryCard.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/memorycard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/PenDrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/pendrive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/PostaElettronica.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/postaelettronica.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/SSDEsterno.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/ssdesterno.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/icon/SolidStateDrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/solidstatedrive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlEvidence.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlEvidence.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlHostSpecial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlHostSpecial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlMagazzino.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlMagazzino.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlTools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlTools.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/lib/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -47,11 +59,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/font/icon" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cfcm\font\icon" />
       <recent name="C:\xampp\htdocs\cfcm\images" />
       <recent name="C:\xampp\htdocs\cfcm\vista" />
       <recent name="C:\Users\gaetano\PhpstormProjects\cfcm" />
@@ -72,7 +86,14 @@
       <workItem from="1616348434571" duration="2851000" />
       <workItem from="1616450251438" duration="3983000" />
       <workItem from="1630501246049" duration="3838000" />
-      <workItem from="1630506653326" duration="83000" />
+      <workItem from="1630506653326" duration="519000" />
+      <workItem from="1631055284959" duration="453000" />
+      <workItem from="1631055759960" duration="66000" />
+      <workItem from="1631055891571" duration="74000" />
+      <workItem from="1631183850501" duration="803000" />
+      <workItem from="1631266447728" duration="610000" />
+      <workItem from="1631461442405" duration="723000" />
+      <workItem from="1631887107337" duration="2084000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -123,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630505600484</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1630506805527</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630506805527</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +174,11 @@
     <MESSAGE value="aggiunto mpdf" />
     <MESSAGE value="cambiato logo" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

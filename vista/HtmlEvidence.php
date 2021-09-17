@@ -135,6 +135,7 @@ class HtmlEvidence
         {
             $evi_icon = str_replace(" ", "", $row['evi_tipo']);
             $path_evi_icon = "font/icon/".$evi_icon.".png";
+            $path_evi_icon = strtolower($path_evi_icon);
             echo"<form action='index.php'  method='post'>
                     <tr>
                         <td><input type='hidden' id='evi_id' name='evi_id'  value=" . $row['evi_id'] ."><img src= $path_evi_icon height='35'></td>

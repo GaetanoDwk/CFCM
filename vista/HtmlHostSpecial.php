@@ -86,6 +86,7 @@ class HtmlHostSpecial
         {
             $icona = str_replace(" ", "", $row['ho_tipo']);
             $PathIcona = "font/icon/".$icona.".png";
+            $PathIcona = strtolower($PathIcona);
 
             echo "<form action='index.php'  method='post'>
                     <tr>
@@ -107,6 +108,7 @@ class HtmlHostSpecial
         {
             $icona = str_replace(" ", "", $row['ho_tipo']);
             $PathIcona = "font/icon/".$icona.".png";
+            $PathIcona = strtolower($PathIcona);
             echo"<form action='index.php' method='post'>
                     <tr>
                         <td><input type='hidden' id='ho_id' name='ho_id'  value=" . $row['ho_id'] ."><img src= $PathIcona height='35'><img src='font/icon/collection.png' height='15'></td>

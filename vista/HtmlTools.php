@@ -77,7 +77,7 @@ class HtmlTools
                             <td>La funzione fà una cernita di doppioni degli elementi. Sia tra i Carved che tra i Residenti elimina gli elementi con path più corto. Infine genera un filtro XML importabile in FTK.</td>
                         </tr>
                         <tr>
-                            <td><button name='comando' value='ftktools_email' style='border: none;'><img src='font/icon/PostaElettronica.png' height='40px'></button><p style='color: red;'>IN FASE DI SVILUPPO</p></td>
+                            <td><button name='comando' value='ftktools_email' style='border: none;'><img src='font/icon/postaelettronica.png' height='40px'></button><p style='color: red;'>IN FASE DI SVILUPPO</p></td>
                             <td></td>
                             
                             <!--td><img src='font/icon/info.png' title='1 STEP: Questo script crea un filtro xml senza doppioni dando priorità ai files residenti con path più corto. Proseguire esportando da FTK un FileList contenente ITEM NUMBER, PATH e MD5' height='35px'></td>
@@ -705,7 +705,7 @@ class HtmlTools
                     <button name='comando' value='menu_procure' style='position: absolute; left: 6%; border: none;' title='Torna al menu'><i class='fa fa-home fa-2x' aria-hidden='true'></i></button>
                 </form>
             <br><br>
-            <img src='font/icon/PostaElettronica.png' height='80px'>
+            <img src='font/icon/postaelettronica.png' height='80px'>
             <br><br>
             <h6 class='docs-header'>DESCRIZIONE</h6>
             <p>Questo tool esegue una cernita delle email duplicate basandosi sui seguenti dati: <b>To, From, Submit, Delivery, Attachment, Psize, Lsize, Deleted</b></p>

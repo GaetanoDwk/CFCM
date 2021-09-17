@@ -111,7 +111,7 @@ class HtmlMagazzino
                                 <td style='padding: 10px;'><input type='text' name='note' style='width: 200px;'></td>
                                 <td bgcolor='#d3d3d3' style='padding: 10px;'>
                                     <center>
-                                        <button type='submit' name='comando' value='insert_magazzino' style='border:none; padding: 0px 4px;'><img src='./font/icon/FloppyDisk.png' width='35px' title='Salva'></button>
+                                        <button type='submit' name='comando' value='insert_magazzino' style='border:none; padding: 0px 4px;'><img src='./font/icon/floppydisk.png' width='35px' title='Salva'></button>
                                     </center>
                                 </td>
                             </tr>
