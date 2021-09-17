@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/font/icon/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/backup.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfcm.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cfcm.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/FloppyDisk.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/floppydisk.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/HardDisk.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/harddisk.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/HardDiskEsterno.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/harddiskesterno.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/LettoreMP3.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/lettoremp3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/MemoryCard.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/memorycard.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/PenDrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/pendrive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/PostaElettronica.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/postaelettronica.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/SSDEsterno.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/ssdesterno.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/icon/SolidStateDrive.png" beforeDir="false" afterPath="$PROJECT_DIR$/font/icon/solidstatedrive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlEvidence.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlEvidence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlHostSpecial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlHostSpecial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlMagazzino.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlMagazzino.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlTools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlTools.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +79,7 @@
       <workItem from="1631183850501" duration="803000" />
       <workItem from="1631266447728" duration="610000" />
       <workItem from="1631461442405" duration="723000" />
-      <workItem from="1631887107337" duration="2084000" />
+      <workItem from="1631887107337" duration="3475000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -151,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630506805527</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1631889613582</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631889613582</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
