@@ -143,7 +143,6 @@ class Controllo
      */
     private function menu_procure()
     {
-        $this->CntCaso->checkScadenze();
         $_SESSION['cli_type'] = 'P';
         // SELEZIONO I DATI DA VISUALIZZARE NEL MENU
         $datiProcure = $this->MdlPro->select_procure();

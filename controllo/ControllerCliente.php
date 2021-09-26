@@ -165,7 +165,6 @@ class ControllerCliente
      */
     private function menu_procure()
     {
-        $this->ControllerCaso->checkScadenze();
         // SETTO P NELLA TIPOLOGIA DI CLIENTE NELLA SESSIONE (serve nella navigazione tramite menu per restare nella sezione delle Procure)
         $_SESSION['cli_type'] = 'P';
         // SELEZIONO I DATI DA VISUALIZZARE NEL MENU

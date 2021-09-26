@@ -12,11 +12,9 @@ class ModelCaso {
      * @var string $ca_inc: numero di incarico
      * @var string $ca_tipo: tipologia (penale/civile)
      * @var datetime $ca_datains: data inserimento
-     * @var datetime $ca_datadel: data eliminazione
-     * @var int $ca_ggres: giorni restanti per la scadenza annuale
      * @var int $ex_id_pm: chiave esterna relativa all'identificativo del PM a cui appartiene il caso corrente.
      */
-    private $ca_id, $ca_num, $ca_inc, $ca_tipo, $ca_dss, $ca_datains, $ca_datadel, $ca_ggres, $ex_id_pm ;
+    private $ca_id, $ca_num, $ca_inc, $ca_tipo, $ca_dss, $ca_datains, $ex_id_pm ;
 
     /**
      * @var array $res: dichiarazione di un array utilizzato successivamente.
@@ -68,16 +66,6 @@ class ModelCaso {
         $this->ca_datains = $value;
     }
 
-    public function set_ca_datadel($value)
-    {
-        $this->ca_datadel = $value;
-    }
-
-    public function set_ca_ggres($value)
-    {
-        $this->ca_ggres = $value;
-    }
-
     public function set_ex_id_pm($value)
     {
         $this->ex_id_pm = $value;
@@ -115,16 +103,6 @@ class ModelCaso {
         return $this->ca_datains;
     }
 
-    public function get_ca_datadel()
-    {
-        return $this->ca_datadel;
-    }
-
-    public function get_ca_ggres()
-    {
-        return $this->ca_ggres;
-    }
-
     public function get_ex_id_pm()
     {
         return $this->ex_id_pm;
@@ -157,57 +135,6 @@ class ModelCaso {
         }
 
         return $this->res;
-    }
-
-    /**
-     * @return int
-     * Conta quanti casi sono in scadenza annuale. (solo procura Napoli)
-     */
-    public function count_scadenze(){
-        $conn = DbManager::getConnection();
-        $sql = $conn->prepare("SELECT ca_id FROM caso
-                               LEFT OUTER JOIN pm ON pm.pm_id = caso.ex_id_pm
-                               LEFT OUTER JOIN cliente ON cliente.cli_id = pm.ex_id_cli
-                               WHERE ca_ggres <=30 AND cli_citta = 'Napoli'");
-        // EXECUTE SQL
-        $sql->execute();
-        $num = $sql->rowCount();
-        return $num;
-    }
-
-    /**
-     * @return array
-     * Seleziona tutti i casi in scadenza annuale (solo procura Napoli)
-     */
-    public function select_all_casi_for_scadenza()
-    {   //_____________________________
-        // Preleva la connessione al db
-        $conn = DbManager::getConnection();
-
-        //_____________________________
-        // prepara la query, la esegue
-        $sql = $conn->prepare("SELECT cli_citta, pm_nome, pm_cognome, ca_id, ca_num, ca_tipo, ca_ggres
-                               FROM caso
-                               LEFT OUTER JOIN pm ON pm.pm_id = caso.ex_id_pm
-                               LEFT OUTER JOIN cliente ON cliente.cli_id = pm.ex_id_cli
-                               WHERE ca_ggres <=30 AND cli_citta = 'Napoli'");
-        $sql->execute();
-
-        //______________________________________________________________________________________
-        // istanzia la classe utenti ed esegue il fetch dei dati settando tutti i suoi attributi
-        while ($row = $sql->fetch()) {
-            $res[] = array(
-                "cli_citta" => $row['cli_citta'],
-                "pm_nome" => $row['pm_nome'],
-                "pm_cognome" => $row['pm_cognome'],
-                "ca_id" => $row['ca_id'],
-                "ca_num" => $row['ca_num'],
-                "ca_tipo" => $row['ca_tipo'],
-                "ca_ggres" => $row['ca_ggres']
-            );
-        }
-
-        return $res;
     }
 
     /**

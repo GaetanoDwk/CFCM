@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/evi_1877/ssd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/opened.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/retro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archiviolog/2769.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dump-cfcm-202109262247.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfcm.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/ControllerCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerCaso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/ControllerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/Controllo.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/Controllo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/esecuzione.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/esecuzione.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modello/ModelCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelCaso.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/backup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script/backup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlCaso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/HtmlProcura.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlProcura.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +95,11 @@
       <workItem from="1631461442405" duration="723000" />
       <workItem from="1631887107337" duration="3716000" />
       <workItem from="1632061132127" duration="635000" />
-      <workItem from="1632144943268" duration="221000" />
+      <workItem from="1632144943268" duration="834000" />
+      <workItem from="1632146480238" duration="74000" />
+      <workItem from="1632495188358" duration="607000" />
+      <workItem from="1632575424144" duration="2899000" />
+      <workItem from="1632688523465" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -153,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631890840155</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <created>1632145172991</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632145172991</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

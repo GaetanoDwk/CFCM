@@ -84,34 +84,11 @@ class ControllerCaso
                 echo "copertina CTP";
                 break;
 
-            case "consulenza":
-                $this->consulenza();
-                break;
-
-            case "scadenze":
-                $this->scadenze();
-                break;
-
             case "infocaso":
                 $this->infocaso();
                 break;
         }
 
-    }
-
-
-    /**
-     * Questa funzione è stata introdotta con l'intento di controllare quali casi si trovano nel DB da 1 anno per proporne
-     * un'eventuale eliminazione (facoltativa).
-     */
-    public function checkScadenze(){
-        $num = $this->ModelCaso->count_scadenze();
-        if($num > 0){
-            $_SESSION['scadenze'] = $num;
-        }
-        else {
-            $_SESSION['scadenze'] = 0;
-        }
     }
 
 
@@ -134,17 +111,6 @@ class ControllerCaso
         $IdPro = $this->ModelProcura->get_cli_id();
         $_SESSION['post_pm_id'] = $ex_id_pm;
         $_SESSION['post_cli_id'] = $IdPro;
-    }
-
-
-    /**
-     * La funzione scadenze serve a selezionare tutti i casi in scadenza (365 giorni) solo per la procura Napoli e successivamente li stampa a video
-     */
-    private function scadenze(){
-        $scad = $this->ModelCaso->select_all_casi_for_scadenza();
-        $this->Html->HTML_header();
-        $this->HtmlCaso->HTML_scadenze($scad);
-        $this->Html->HTML_footer();
     }
 
 

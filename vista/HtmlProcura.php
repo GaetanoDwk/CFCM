@@ -332,7 +332,6 @@ class HtmlProcura
         $this->print_add_procura_button();
         $this->print_li_button_ctp();
         $this->print_li_button_tribunali();
-        $this->print_li_button_scadenze();
         $this->print_li_button_amministrazione();
         $this->print_li_button_tools();
         $this->print_ufedtools_btn();
@@ -520,27 +519,6 @@ class HtmlProcura
                 </form>
             </center>
         </li>";
-    }
-
-
-    /**
-     * Stampa un tasto relativo alle scadenze dei casi.
-     * Cliccando verrà visualizzata la lista dei casi in "scadenza".
-     * La "scadenza", ovvero il tempo di vita del caso in CFCM è impostata a 365 giorni.
-     */
-    private function print_li_button_scadenze()
-    {
-        if($_SESSION['scadenze'] > 0){
-            echo"
-        <li id='scadenze' onmouseover='liColorGray(this.id)' onmouseout='liColorBlack(this.id)'>
-            <center>
-                <form action='index.php' method='post'>
-                    <button name='comando' value='scadenze' style='border: none; height: auto;' title='Scadenze'><blink style='color: orangered;'>SCADENZE!</blink></button>
-                </form>
-            </center>
-        </li>";
-        }
-
     }
 
 
