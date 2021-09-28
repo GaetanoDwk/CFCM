@@ -424,10 +424,7 @@ class ControllerIndagato
                     echo $this->PdfInd->HTML_REPORT_table_one_tr('Log');
                     $logpath = $row['clo_log'];
                     $log = $this->ModelClone->get_log_file($logpath);
-                    if($log != 0){
-                        echo "<pre>$log</pre>";
-                        echo $this->PdfInd->HTML_close_newpage();
-                    }
+                    echo "<pre>$log</pre>";
                     echo $this->PdfInd->HTML_close_newpage();
                 }
 

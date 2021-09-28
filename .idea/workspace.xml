@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/evi_1877/ssd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/opened.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/retro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiviolog/2769.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dump-cfcm-202109262247.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cfcm.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllo/ControllerCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerCaso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllo/ControllerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllo/Controllo.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/Controllo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/esecuzione.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/esecuzione.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modello/ModelCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/ModelCaso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/backup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script/backup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlCaso.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlCaso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/HtmlProcura.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/HtmlProcura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllo/ControllerIndagato.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerIndagato.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pattern.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/pattern.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +47,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/font/icon" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -99,7 +93,9 @@
       <workItem from="1632146480238" duration="74000" />
       <workItem from="1632495188358" duration="607000" />
       <workItem from="1632575424144" duration="2899000" />
-      <workItem from="1632688523465" duration="1680000" />
+      <workItem from="1632688523465" duration="3662000" />
+      <workItem from="1632747141180" duration="1315000" />
+      <workItem from="1632826702545" duration="2549000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -178,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632145172991</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1632698486215</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632698486215</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

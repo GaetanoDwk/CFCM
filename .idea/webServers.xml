@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7f47ac6e-3caa-4711-a08f-63c57371124f" name="cfcm">
+        <fileTransfer rootFolder="/var/www/html/cfcm" accessType="SFTP" host="192.168.1.50" port="22" sshConfigId="09603e49-c8f2-4de5-a48c-958755ce788d" sshConfig="cfcm@192.168.1.50:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
