@@ -22,7 +22,7 @@ class DbManager{
         try {
             // assign PDO object to db variable
             //self::$db = new PDO( 'mysql:host=localhost;dbname=cfcm', 'service', '8926e0a3a69ffaa31509f40a841025cf' );
-            self::$db = new PDO( 'mysql:host=localhost;dbname=cfcm', 'root', '' );
+            self::$db = new PDO( 'mysql:host=localhost;dbname=cfcm', 'admin', 'passw0rd' );
         	self::$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         }
         catch (PDOException $e) {

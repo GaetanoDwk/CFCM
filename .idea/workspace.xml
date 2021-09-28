@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="version: 1.0.0">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfcm.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllo/ControllerIndagato.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllo/ControllerIndagato.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pattern.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/pattern.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modello/DbManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/modello/DbManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +49,9 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/font/icon" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -95,7 +94,8 @@
       <workItem from="1632575424144" duration="2899000" />
       <workItem from="1632688523465" duration="3662000" />
       <workItem from="1632747141180" duration="1315000" />
-      <workItem from="1632826702545" duration="2549000" />
+      <workItem from="1632826702545" duration="3515000" />
+      <workItem from="1632835721531" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -181,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632698486215</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="version: 1.0.0">
+      <created>1632834419014</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632834419014</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +212,8 @@
     <MESSAGE value="cambiato logo" />
     <MESSAGE value="readme" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="version: 1.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version: 1.0.0" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
