@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: cfcm
+-- Host: 192.168.1.50    Database: cfcm
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.20-MariaDB
+-- Server version	5.5.5-10.3.31-MariaDB-0ubuntu0.20.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -62,13 +62,13 @@ CREATE TABLE `caso` (
   `ca_inc` varchar(255) DEFAULT NULL,
   `ca_tipo` varchar(50) NOT NULL,
   `ca_dss` varchar(255) NOT NULL,
-  `ca_datains` date NOT NULL,
+  `ca_datains` date DEFAULT NULL,
   `ex_id_pm` int(11) NOT NULL,
   PRIMARY KEY (`ca_id`) USING BTREE,
   KEY `vincolo_id_pm` (`ex_id_pm`) USING BTREE,
   KEY `ca_id` (`ca_id`) USING BTREE,
   CONSTRAINT `caso_ibfk_1` FOREIGN KEY (`ex_id_pm`) REFERENCES `pm` (`pm_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=257 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=258 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `caso` (
 
 LOCK TABLES `caso` WRITE;
 /*!40000 ALTER TABLE `caso` DISABLE KEYS */;
-INSERT INTO `caso` VALUES (256,'1','1','Penale','1','0000-00-00',130);
+INSERT INTO `caso` VALUES (257,'1','1','Penale','1',NULL,131);
 /*!40000 ALTER TABLE `caso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `cliente` (
   `is_procura` tinyint(4) DEFAULT 0,
   `is_tribunale` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`cli_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (46,'Procura della Repubblica Tribunale di TEST','TEST',0,1,0);
+INSERT INTO `cliente` VALUES (47,'Procura della Repubblica Tribunale di TEST','TEST',0,1,0);
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,6 @@ CREATE TABLE `clone` (
 
 LOCK TABLES `clone` WRITE;
 /*!40000 ALTER TABLE `clone` DISABLE KEYS */;
-INSERT INTO `clone` VALUES (2769,'Fisica','','FTK Imager','d116ed8d064ea3939ba650d6beca6efd','6951e57e929d48973df627cc4b39c7d950749a70','','archiviolog/2769.txt',1877,NULL);
 /*!40000 ALTER TABLE `clone` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +177,6 @@ CREATE TABLE `evidence` (
 
 LOCK TABLES `evidence` WRITE;
 /*!40000 ALTER TABLE `evidence` DISABLE KEYS */;
-INSERT INTO `evidence` VALUES (1877,'HD PC','HardDisk','123','234','',0,'500','GB','archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/evi_1877/','ssd.jpg',NULL,NULL,NULL,1278);
 /*!40000 ALTER TABLE `evidence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,7 +248,6 @@ CREATE TABLE `host` (
 
 LOCK TABLES `host` WRITE;
 /*!40000 ALTER TABLE `host` DISABLE KEYS */;
-INSERT INTO `host` VALUES (1278,'PC','seriale','password',1,'Workstation','modello','archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/','opened.jpg','retro.jpg',NULL,NULL,NULL,NULL,256,548);
 /*!40000 ALTER TABLE `host` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -319,7 +316,6 @@ CREATE TABLE `indagato` (
 
 LOCK TABLES `indagato` WRITE;
 /*!40000 ALTER TABLE `indagato` DISABLE KEYS */;
-INSERT INTO `indagato` VALUES (548,'Indagato','TEST_NOME_IND','TEST_COGN_IND',256);
 /*!40000 ALTER TABLE `indagato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -409,7 +405,7 @@ CREATE TABLE `pm` (
   PRIMARY KEY (`pm_id`) USING BTREE,
   KEY `id_pro` (`ex_id_cli`) USING BTREE,
   CONSTRAINT `pm_ibfk_1` FOREIGN KEY (`ex_id_cli`) REFERENCES `cliente` (`cli_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -418,7 +414,7 @@ CREATE TABLE `pm` (
 
 LOCK TABLES `pm` WRITE;
 /*!40000 ALTER TABLE `pm` DISABLE KEYS */;
-INSERT INTO `pm` VALUES (130,'Dott.','TEST_NOME','TEST_COGNOME',46);
+INSERT INTO `pm` VALUES (131,'Dott.','TEST','TEST',47);
 /*!40000 ALTER TABLE `pm` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -590,4 +586,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-26 22:47:38
+-- Dump completed on 2021-09-28 15:40:57
