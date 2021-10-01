@@ -73,6 +73,10 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 <h2>Generazione di reports PDF</h2>
 <p>E' in corso l'integrazione della libreria mpdf per la generazione di pdf direttamente da CFCM senza l'appoggio di applicazioni di terze parti come PdfCreator</p>
 
+<h2>CFCM Virtual Machine</h2>
+<p>Ho realizzato una virtual machine contenente CFCM, phpmyadmin, Cockpit ed altre configurazioni già pronte all'utilizzo. Basta importare la VM ed avviarla!</p>
+<p>Per maggiori informazioni contattatemi su <a href="https://www.linkedin.com/in/gaetano-riello-93b74564/">Linkedin</a>.</p>
+
 <h2>Donazioni</h2>
 <p>
   Se CFCM ti è stato utile e vuoi offrirmi un caffè puoi farlo seguendo il link qui sotto: <br> 
