@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="version: 1.0.2">
+    <list default="true" id="3d833061-a092-41c3-90f7-f69d473579d3" name="Default Changelist" comment="update info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivioimg/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/evi_1877/ssd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/opened.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivioimg/cli_46/pm_130/ca_256/ind_548/ho_1278/images/retro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archiviolog/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archiviolog/2769.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump-cfcm-202109281545.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dump-cfcm-202109281545.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/backup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script/backup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +105,9 @@
       <workItem from="1632839359848" duration="695000" />
       <workItem from="1632956887098" duration="1676000" />
       <workItem from="1632994756862" duration="3047000" />
-      <workItem from="1633076246353" duration="453000" />
+      <workItem from="1633076246353" duration="1722000" />
+      <workItem from="1633339213595" duration="1416000" />
+      <workItem from="1633384502753" duration="1436000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto mpdf">
       <created>1630501505606</created>
@@ -225,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632839452251</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update info">
+      <created>1633076719699</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1633076719699</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +269,8 @@
     <MESSAGE value="version: 1.0.0" />
     <MESSAGE value="version: 1.0.1" />
     <MESSAGE value="version: 1.0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version: 1.0.2" />
+    <MESSAGE value="update info" />
+    <option name="LAST_COMMIT_MESSAGE" value="update info" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,4 +8,8 @@ sleep 1
 tar -cvf /home/cfcm/Backups/cfcm-"$(date +"%d-%m-%Y-%H-%M-%s")".tar /var/www/html/cfcm/
 sleep 1
 # Elimina Backup vecchi di 30 giorni
-find /home/cfcm/Backups/cfcm* -mtime +30 -exec rm -f {} \;
+#find /home/cfcm/Backups/cfcm* -mtime +30 -exec rm -f {} \;
+for number in {1..30}
+do
+	rm /home/cfcm/Backups/cfcm-$(date -d "$date -$number days" +"%d-%m-%Y")*
+done
