@@ -1,3 +1,0 @@
-Version: 1.0.0
-- Risolto bug in ControllerIndagato.php linea 427 sulla stampa log eliminando l'IF.
-- Eliminate 3 colonne dalla tabella caso: ca_datains, ca_datadel, ca_ggres
