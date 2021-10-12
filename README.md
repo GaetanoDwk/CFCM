@@ -2,17 +2,17 @@
 <img src=/images/logo.png height='200px' alt='logo'>
 Computer Forensics Case Manager<br>
 
-<p>CFCM è un gestionale open-source web based pensato per piccole aziende o singoli professionisti nel settore della Digital Forensics. Permette di gestire agevolmente le informazioni relative agli artefatti informatici ed infine generare una reportistica in pdf.
-Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecnico forense utilizza spesso; come ad esempio Ftk Toolkit e Cellebrite Ufed Reader.</p>
+<p>CFCM è un gestionale open-source web based nel settore della Digital Forensics. Permette di gestire agevolmente le informazioni relative agli artefatti informatici e generare una reportistica in pdf.
+Inoltre integra dei "tools" di ausilio ad altri strumenti noti nella digital forensics; Ftk Toolkit e Cellebrite Ufed Reader.</p>
 <h2>Pre-Requisiti</h2>
 <p>L'installazione del gestionale richiede la presenza dell'ambiente di sviluppo per PHP denominato <a href="https://www.apachefriends.org/download.html" rel="nofollow">Xampp (3.2.4 o superiore)</a><br>
-  Quest'ultimo integra già al suo interno tutto l'occorrente, ovvero:</p>
+  Quest'ultimo è dotato di:</p>
   <ul>
     <li>Web Server Apache 2.4.46</li>
     <li>Interprete PHP 8</li>
     <li>Database MySQL 8 / MariaDb 10.4</li>
   </ul>
-<p>Inoltre, nonostante Xampp integri già <a href="https://www.phpmyadmin.net/" rel="nofollow">PhpMyAdmin</a> che permette di gestire MySQL da pannello web, è utile installare un software per la gestione del database come i seguenti:</p>
+<p>Nonostante Xampp integri già <a href="https://www.phpmyadmin.net/" rel="nofollow">PhpMyAdmin</a> che permette di gestire MySQL da pannello web, è utile installare un software per la gestione del database, tra cui:</p>
 <ul>
   <li><a href="https://www.mysql.com/products/workbench/" rel="nofollow">MySQL Workbench</a>
   <li><a href="https://www.heidisql.com/" rel="nofollow">HeidiSQL</a></li>
@@ -21,7 +21,7 @@ Inoltre integra dei "tools" di ausilio al lavoro con altri strumenti che un tecn
 </ul>
 
 <h2>Installazione</h2>
-Per procedere all'installazione è necessario seguire i seguenti punti:
+Per installare CFCM seguire i seguenti passi:
 <ol>
 <li>
 <p>Scaricare il progetto.</p>
@@ -57,9 +57,9 @@ Per procedere all'installazione è necessario seguire i seguenti punti:
 Infine vi sono alcune configurazioni da effettuare tra cui:
 <ol>
 <li>Aprire il file php.ini e abilitare l'estensione gd togliendo il punto e virgola alla stringa ;extension=gd per decommentarla</li>
+<li>Aprire il file di configurazione di apache e modificare la direttiva <code>AllowOverride None</code> trasformandolo in <code>AllowOverride All</code> relativa al path della directory <code>www</code> o <code>htdocs</code></li>
 <li>
-    <p>Accedere al gestionale e recarsi nella sezione "Amministrazione/Azienda" ed aggiungere una nuova azienda per inserire le 
-      informazioni che verrano successivamente stampate nel footer della copertina dei Report pdf.</p>
+    <p>Accedere al gestionale e recarsi nella sezione "Amministrazione/Azienda" ed aggiungere una nuova azienda seguendo le indicazioni</p>
 </li>
 
 <li>
@@ -71,11 +71,18 @@ Infine vi sono alcune configurazioni da effettuare tra cui:
 </ol>
 
 <h2>Generazione di reports PDF</h2>
-<p>E' in corso l'integrazione della libreria mpdf per la generazione di pdf direttamente da CFCM senza l'appoggio di applicazioni di terze parti come PdfCreator</p>
+<p>Nella pagina relativa all'indagato avrete modo di vedere che vi sono 2 modalità per generare la reportistica in PDF:</p>
+<ol>
+<li><code>Tasto rosso</code> necessita dell'ausilio di una stampante virtuale come pdfcreator per poter stampare in pdf</li>
+<li><code>Tasto verde</code> genera direttamente il report tecnico in pdf</li>
+</ol>
 
 <h2>CFCM Virtual Machine</h2>
 <p>Ho realizzato una virtual machine contenente CFCM, phpmyadmin, Cockpit ed altre configurazioni già pronte all'utilizzo. Basta importare la VM ed avviarla!</p>
 <p>Per maggiori informazioni contattatemi su <a href="https://www.linkedin.com/in/gaetano-riello-93b74564/">Linkedin</a>.</p>
+
+<h2>Bugs</h2>
+<p>Per segnalare bug o malfunzionamenti contattatemi su <a href="https://www.linkedin.com/in/gaetano-riello-93b74564/">Linkedin</a></p>
 
 <h2>Donazioni</h2>
 <p>
